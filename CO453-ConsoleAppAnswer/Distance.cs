@@ -9,7 +9,9 @@ namespace CO453_ConsoleAppAnswer
     /// to enter the number of miles, and then converting
     /// that into the equivalent number feet
     /// </summary>
-    /// <author>Derek Peacock</author>
+    /// <author>
+    /// Derek Peacock
+    /// </author>
     public class Distance
     {
         public const int MILES_TO_FEET = 1760 * 3;

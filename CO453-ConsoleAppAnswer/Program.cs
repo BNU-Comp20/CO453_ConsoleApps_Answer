@@ -6,9 +6,10 @@ namespace CO453_ConsoleAppAnswer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Derek's Console Apps 2020");
-            Distance converter = new Distance();
-            converter.ConvertToFeet();
+            Console.WriteLine("C# Console Applications 2020");
+
+            DistanceConverter converter = new DistanceConverter();
+            converter.CalculateFeet();
         }
     }
 }
