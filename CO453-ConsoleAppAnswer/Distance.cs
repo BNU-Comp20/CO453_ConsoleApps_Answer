@@ -22,19 +22,19 @@ namespace CO453_ConsoleAppAnswer
         {
             Console.WriteLine("Convert Miles to Feet");
 
-            inputMiles();
+            InputMiles();
 
             feet = miles * MILES_TO_FEET;
 
-            outputFeet();
+            OutputFeet();
         }
 
-        private void outputFeet()
+        private void OutputFeet()
         {
             Console.WriteLine(miles + " miles is " + feet + " feet!");
         }
 
-        private void inputMiles()
+        private void InputMiles()
         {
             Console.Write("Enter the number of miles >");
             string value = Console.ReadLine();
