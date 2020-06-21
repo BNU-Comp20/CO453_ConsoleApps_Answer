@@ -1,7 +1,7 @@
-﻿using System;
-
-namespace CO453_ConsoleAppAnswer
+﻿namespace CO453_ConsoleAppAnswer
 {
+    using System;
+
     /// <summary>
     /// This class offers methods for prompting the user
     /// select the from length unit and the to length unit.
@@ -21,7 +21,7 @@ namespace CO453_ConsoleAppAnswer
         private double fromNumber;
         private double toNumber;
 
-        private string[] units = new string[]
+        private readonly string[] units = new string[]
         {
             "Feet",
             "Meters",
@@ -29,7 +29,7 @@ namespace CO453_ConsoleAppAnswer
             "Miles"
         };
 
-        private double[,] conversionFactors = new double[NUMBER_OF_UNITS,NUMBER_OF_UNITS]
+        private readonly double[,] conversionFactors = new double[NUMBER_OF_UNITS,NUMBER_OF_UNITS]
         { 
           {1.0,     0.3048,  0.0003048, 0.000189394},
           {3.28084, 1.0,     0.001,     0.000621371},

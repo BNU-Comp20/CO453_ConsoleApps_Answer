@@ -1,9 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CO453_ConsoleAppAnswer
+﻿namespace CO453_ConsoleAppAnswer
 {
+    using System;
+    using System.Collections.Generic;
+    using System.Text;
+
     /// <summary>
     /// This class offers methods for prompting the user
     /// to input the number of miles, and then calculates

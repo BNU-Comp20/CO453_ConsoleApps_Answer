@@ -1,7 +1,6 @@
-﻿using System;
-
-namespace CO453_ConsoleAppAnswer
+﻿namespace CO453_ConsoleAppAnswer
 {
+    using System;
     /// <summary>
     /// This class runs first and create a DistanceConverter
     /// allowing the user three ways of converting distances

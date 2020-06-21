@@ -1,9 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace CO453_ConsoleAppAnswer
+﻿namespace CO453_ConsoleAppAnswer
 {
+    using System;
+
     /// <summary>
     /// This class offers methods for prompting the user
     /// to input the number of miles, and then calculates
@@ -14,9 +12,9 @@ namespace CO453_ConsoleAppAnswer
     /// </author>
     public class DistanceConverter2
     {
-        public const int FEET_IN_MILES = 5280;
-        public const double METRES_IN_MILES = 1609.34;
-        public const double MILES_IN_KILOMETRES = 0.621371;
+        public const int FeetInMiles = 5280;
+        public const double MetresInMiles = 1609.34;
+        public const double MilesInKilometres = 0.621371;
 
         // Distance Units
         private double miles;
@@ -32,7 +30,7 @@ namespace CO453_ConsoleAppAnswer
             OutputHeading();
             feet = InputNumber("Enter the number of miles > ");
 
-            feet = miles * FEET_IN_MILES;
+            feet = miles * FeetInMiles;
 
             OutputResult("miles", miles, "feet", feet);
         }
@@ -45,7 +43,7 @@ namespace CO453_ConsoleAppAnswer
             OutputHeading();
             miles = InputNumber("Enter the number of miles > ");
 
-            metres = miles * METRES_IN_MILES;
+            metres = miles * MetresInMiles;
 
             OutputResult("miles", miles, "metres", metres);
         }
@@ -59,7 +57,7 @@ namespace CO453_ConsoleAppAnswer
             OutputHeading();
             kiloMetres = InputNumber("Enter the number of Kilometers > ");
 
-            miles = kiloMetres * MILES_IN_KILOMETRES;
+            miles = kiloMetres * MilesInKilometres;
 
             OutputResult("kilometres", kiloMetres, "miles", miles);
         }
