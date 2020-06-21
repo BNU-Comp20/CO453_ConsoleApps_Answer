@@ -15,11 +15,15 @@ namespace CO453_ConsoleAppAnswer
         {
             Console.WriteLine("C# Console Applications 2020");
 
-            DistanceConverter converter = new DistanceConverter();
+            DistanceConverter2 converter = new DistanceConverter2();
 
-            converter.CalculateFeet();
+            LengthConverter converter2 = new LengthConverter();
+            //converter2.OutputFactors();
+            //converter2.Execute();
+
+            //converter.CalculateFeet();
             converter.CalculateMetres();
-            converter.CalculateMiles();
+            //converter.CalculateMiles();
         }
     }
 }

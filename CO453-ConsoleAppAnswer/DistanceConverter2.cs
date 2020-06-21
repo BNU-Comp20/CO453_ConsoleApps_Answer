@@ -12,7 +12,7 @@ namespace CO453_ConsoleAppAnswer
     /// <author>
     /// Derek Peacock
     /// </author>
-    class DistanceConverter
+    public class DistanceConverter2
     {
         public const int FEET_IN_MILES = 5280;
         public const double METRES_IN_MILES = 1609.34;
@@ -21,7 +21,7 @@ namespace CO453_ConsoleAppAnswer
         // Distance Units
         private double miles;
         private double feet;
-        private double metres;  
+        private double metres;
         private double kiloMetres;
 
         /// <summary>
@@ -30,11 +30,11 @@ namespace CO453_ConsoleAppAnswer
         public void CalculateFeet()
         {
             OutputHeading();
-            InputMiles();
+            feet = InputNumber("Enter the number of miles > ");
 
             feet = miles * FEET_IN_MILES;
 
-            OutputFeet();
+            OutputResult("miles", miles, "feet", feet);
         }
 
         /// <summary>
@@ -43,11 +43,11 @@ namespace CO453_ConsoleAppAnswer
         public void CalculateMetres()
         {
             OutputHeading();
-            InputMiles();
+            miles = InputNumber("Enter the number of miles > ");
 
             metres = miles * METRES_IN_MILES;
 
-            OutputMetres();
+            OutputResult("miles", miles, "metres", metres);
         }
 
 
@@ -57,61 +57,31 @@ namespace CO453_ConsoleAppAnswer
         public void CalculateMiles()
         {
             OutputHeading();
-            InputKilometres();
+            kiloMetres = InputNumber("Enter the number of Kilometers > ");
 
             miles = kiloMetres * MILES_IN_KILOMETRES;
 
-            OutputMiles();
+            OutputResult("kilometres", kiloMetres, "miles", miles);
         }
 
         /// <summary>
-        /// Prompt the user to input the number of kilometres
+        /// Prompt the user to input a double number
         /// </summary>
-        private void InputKilometres()
+        private double InputNumber(string prompt)
         {
-            Console.Write("  Enter the number of Kilometres >");
+            Console.Write(prompt);
             string value = Console.ReadLine();
-            kiloMetres = Convert.ToDouble(value);
-        }
-
-        /// <summary>
-        /// Prompt the user to input the number of miles
-        /// </summary>
-        private void InputMiles()
-        {
-            Console.Write("  Enter the number of miles >");
-            string value = Console.ReadLine();
-            miles = Convert.ToDouble(value);
-        }
-
-        /// <summary>
-        /// Output how many feet there are in the given miles
-        /// </summary>
-        private void OutputFeet()
-        {
-            Console.WriteLine();
-            Console.WriteLine($"  {miles} miles is {feet} feet!");
-            Console.WriteLine();
+            return Convert.ToDouble(value);
         }
 
         /// <summary>
         /// Output the number of metres in the given distance in miles
         /// </summary>
-        private void OutputMetres()
+        private void OutputResult(string fromUnit, double fromNumber, 
+                                  string toUnit,   double toNumber)
         {
             Console.WriteLine();
-            Console.WriteLine($"  {miles} miles is {metres} metres!");
-            Console.WriteLine();
-        }
-
-
-        /// <summary>
-        /// Output the number of miles in the given distance in Kilometres
-        /// </summary>
-        private void OutputMiles()
-        {
-            Console.WriteLine();
-            Console.WriteLine("  " + kiloMetres + " Kilometres is " + miles + " miles!");
+            Console.WriteLine($"  {fromNumber} {fromUnit} is {toNumber} {toUnit} !");
             Console.WriteLine();
         }
 
@@ -128,6 +98,4 @@ namespace CO453_ConsoleAppAnswer
             Console.WriteLine();
         }
     }
-
 }
-
