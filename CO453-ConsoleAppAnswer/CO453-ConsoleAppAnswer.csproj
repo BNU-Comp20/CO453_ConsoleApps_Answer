@@ -7,8 +7,4 @@
     <StartupObject>CO453_ConsoleAppAnswer.Program</StartupObject>
   </PropertyGroup>
 
-  <ItemGroup>
-    <Folder Include="Images\" />
-  </ItemGroup>
-
 </Project>

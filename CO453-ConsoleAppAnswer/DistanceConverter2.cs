@@ -15,7 +15,7 @@
         public const int FeetInMiles = 5280;
         public const double MetresInMiles = 1609.34;
         public const double MilesInKilometres = 0.621371;
-
+        
         // Distance Units
         private double miles;
         private double feet;
@@ -75,8 +75,8 @@
         /// <summary>
         /// Output the number of metres in the given distance in miles
         /// </summary>
-        private void OutputResult(string fromUnit, double fromNumber, 
-                                  string toUnit,   double toNumber)
+        private void OutputResult(string fromUnit, double fromNumber,
+                                  string toUnit, double toNumber)
         {
             Console.WriteLine();
             Console.WriteLine($"  {fromNumber} {fromUnit} is {toNumber} {toUnit} !");

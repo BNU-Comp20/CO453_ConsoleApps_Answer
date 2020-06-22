@@ -14,14 +14,14 @@
         {
             Console.WriteLine("C# Console Applications 2020");
 
-            DistanceConverter2 converter = new DistanceConverter2();
+            DistanceConverter3 converter = new DistanceConverter3();
 
             LengthConverter converter2 = new LengthConverter();
             //converter2.OutputFactors();
             //converter2.Execute();
 
             //converter.CalculateFeet();
-            converter.CalculateMetres();
+            converter.Execute();
             //converter.CalculateMiles();
         }
     }
