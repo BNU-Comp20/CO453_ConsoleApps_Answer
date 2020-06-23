@@ -1,8 +1,6 @@
 ﻿namespace CO453_ConsoleAppAnswer
 {
     using System;
-    using System.Collections.Generic;
-    using System.Text;
 
     /// <summary>
     /// This class offers methods for prompting the user
@@ -21,7 +19,7 @@
         // Distance Units
         private double miles;
         private double feet;
-        private double metres;  
+        private double metres;
         private double kiloMetres;
 
         /// <summary>

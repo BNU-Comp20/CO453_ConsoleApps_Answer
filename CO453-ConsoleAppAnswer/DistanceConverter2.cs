@@ -15,7 +15,7 @@
         public const int FeetInMiles = 5280;
         public const double MetresInMiles = 1609.34;
         public const double MilesInKilometres = 0.621371;
-        
+
         // Distance Units
         private double miles;
         private double feet;

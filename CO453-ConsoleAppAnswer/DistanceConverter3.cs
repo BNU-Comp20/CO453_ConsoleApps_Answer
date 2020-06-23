@@ -1,9 +1,19 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CO453_ConsoleAppAnswer
 {
+    /// <summary>
+    /// Units used to measure length or distance
+    /// </summary>
+    public enum DistanceUnit
+    {
+        NoUnit,
+        Feet,
+        Metres,
+        Kilometres,
+        Miles
+    }
+
     /// <summary>
     /// This class offers methods for prompting the user
     /// to select a distance unit to convert from, and a
@@ -38,14 +48,15 @@ namespace CO453_ConsoleAppAnswer
         public const string Metres = "Metres";
         public const string Kilometres = "Kilometres";
         public const string Miles = "Miles";
+        public const string NoUnit = "No Unit";
 
         // Convert from distance value and unit
         private double fromValue;
-        private string fromUnit;
+        private DistanceUnit fromUnit;
 
         // Convert to distance value and unit
         private double toValue;
-        private string toUnit;
+        private DistanceUnit toUnit;
 
         /// <summary>
         /// Calculate how many toUnits there are in the given fromUnits
@@ -55,36 +66,57 @@ namespace CO453_ConsoleAppAnswer
             OutputHeading();
 
             fromUnit = SelectUnit(" Enter unit to convert from > ");
-            fromValue = InputNumber($" Enter the number of {fromUnit} > ");
 
-            toUnit = SelectUnit(" Enter unit to convert to > ");
+            if (fromUnit != DistanceUnit.NoUnit)
+            {
+                fromValue = InputNumber($" Enter the number of {fromUnit} > ");
 
-            if ((fromUnit == Miles) && (toUnit == Feet))
+                toUnit = SelectUnit(" Enter unit to convert to > ");
+
+                if (toUnit != DistanceUnit.NoUnit)
+                {
+                    CalculateToValue();
+                    OutputResult();
+                }
+            }
+        }
+
+        /// <summary>
+        /// Calculate the final converted distance value depending
+        /// on which from and to units have been chosen.
+        /// </summary>
+        private void CalculateToValue()
+        {
+            if ((fromUnit == DistanceUnit.Miles) && 
+                (toUnit == DistanceUnit.Feet))
             {
                 toValue = fromValue * FeetInMiles;
             }
-            else if ((fromUnit == Miles) && (toUnit == Metres))
+            else if ((fromUnit == DistanceUnit.Miles) && 
+                     (toUnit == DistanceUnit.Metres))
             {
                 toValue = fromValue * MetresInMiles;
             }
-            else if ((fromUnit == Miles) && (toUnit == Kilometres))
+            else if ((fromUnit == DistanceUnit.Miles) && 
+                (toUnit == DistanceUnit.Kilometres))
             {
                 toValue = fromValue * KilometresInMiles;
             }
-            else if ((fromUnit == Kilometres) && (toUnit == Miles))
+            else if ((fromUnit == DistanceUnit.Kilometres) && 
+                     (toUnit == DistanceUnit.Miles))
             {
                 toValue = fromValue * MilesInKilometres;
             }
-            else if ((fromUnit == Kilometres) && (toUnit == Metres))
+            else if ((fromUnit == DistanceUnit.Kilometres) && 
+                     (toUnit == DistanceUnit.Metres))
             {
                 toValue = fromValue * MetresInKilometres;
             }
-            else if ((fromUnit == Kilometres) && (toUnit == Feet))
+            else if ((fromUnit == DistanceUnit.Kilometres) && 
+                     (toUnit == DistanceUnit.Feet))
             {
                 toValue = fromValue * FeetInKilometres;
             }
-
-            OutputResult();
         }
 
         /// <summary>
@@ -121,7 +153,7 @@ namespace CO453_ConsoleAppAnswer
         }
 
 
-        private string SelectUnit(string prompt)
+        private DistanceUnit SelectUnit(string prompt)
         {
             Console.WriteLine();
             Console.WriteLine(" 1. Feet");
@@ -133,19 +165,42 @@ namespace CO453_ConsoleAppAnswer
             Console.Write(prompt);
             string choice = Console.ReadLine();
 
-            string unit = Miles;
+            DistanceUnit unit;
 
             if (choice == "1")
             {
-                unit = Feet;
+                unit = DistanceUnit.Feet;
             }
             else if (choice == "2")
             {
-                unit = Metres;
+                unit = DistanceUnit.Metres;
             }
             else if (choice == "3")
             {
-                unit = Kilometres;
+                unit = DistanceUnit.Kilometres;
+            }
+            else if (choice == "4")
+            {
+                unit = DistanceUnit.Miles;
+            }
+            else unit = DistanceUnit.NoUnit;
+
+            switch (choice)
+            {
+                case "1": unit = DistanceUnit.Feet; break;
+                case "2": unit = DistanceUnit.Metres; break;
+                case "3": unit = DistanceUnit.Kilometres; break;
+                case "4": unit = DistanceUnit.Miles; break;
+
+                default:
+                    unit = DistanceUnit.NoUnit;
+                    break;
+            }
+
+            if (unit == DistanceUnit.NoUnit)
+            {
+                Console.WriteLine("Invalid Choice!");
+                Console.WriteLine("Must be a digit 1 to 4");
             }
 
             return unit;

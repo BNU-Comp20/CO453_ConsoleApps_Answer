@@ -17,7 +17,7 @@
 
         private int fromUnit;
         private int toUnit;
-        
+
         private double fromNumber;
         private double toNumber;
 
@@ -29,8 +29,8 @@
             "Miles"
         };
 
-        private readonly double[,] conversionFactors = new double[NUMBER_OF_UNITS,NUMBER_OF_UNITS]
-        { 
+        private readonly double[,] conversionFactors = new double[NUMBER_OF_UNITS, NUMBER_OF_UNITS]
+        {
           {1.0,     0.3048,  0.0003048, 0.000189394},
           {3.28084, 1.0,     0.001,     0.000621371},
           {3280.84, 1000,    1.0,       0.621371},
@@ -55,7 +55,7 @@
         /// </summary>
         public void OutputFactors()
         {
-            for(int i = 0; i < NUMBER_OF_UNITS; i++)
+            for (int i = 0; i < NUMBER_OF_UNITS; i++)
             {
                 for (int j = 0; j < NUMBER_OF_UNITS; j++)
                 {
@@ -102,7 +102,7 @@
             fromUnit = SelectUnitNo();
             toUnit = SelectUnitNo();
 
-            fromNumber = InputNumber(" Enter the number of " 
+            fromNumber = InputNumber(" Enter the number of "
                 + units[fromUnit] + " > ");
 
             toNumber = fromNumber * conversionFactors[fromUnit, toUnit];
@@ -125,7 +125,7 @@
             }
 
             int choice = (int)InputNumber(" Enter choice no > ");
-            return choice -1;
+            return choice - 1;
         }
     }
 }
