@@ -41,7 +41,7 @@ namespace CO453_ConsoleAppAnswer
 
         public const double MetresInFeet = 0.3048;
         public const double KilometresInFeet = 1 / FeetInKilometres;
-        public const double MilesInFeet = 1 / FeetInMiles;
+        public const double MilesInFeet = 1.0 / FeetInMiles;
 
         // Available Distance Units
         public const string Feet = "Feet";
@@ -192,9 +192,7 @@ namespace CO453_ConsoleAppAnswer
                 case "3": unit = DistanceUnit.Kilometres; break;
                 case "4": unit = DistanceUnit.Miles; break;
 
-                default:
-                    unit = DistanceUnit.NoUnit;
-                    break;
+                default: unit = DistanceUnit.NoUnit; break;
             }
 
             if (unit == DistanceUnit.NoUnit)

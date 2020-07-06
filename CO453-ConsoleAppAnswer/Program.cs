@@ -12,16 +12,17 @@
     {
         static void Main()
         {
-            Console.WriteLine("C# Console Applications 2020");
+            Console.WriteLine(" C# Console Applications 2020");
+            Console.WriteLine("");
 
-            DistanceConverter3 converter = new DistanceConverter3();
+            Distance converter = new Distance();
 
             LengthConverter converter2 = new LengthConverter();
             //converter2.OutputFactors();
             //converter2.Execute();
 
             //converter.CalculateFeet();
-            converter.Execute();
+            converter.DoSomething();
             //converter.CalculateMiles();
         }
     }

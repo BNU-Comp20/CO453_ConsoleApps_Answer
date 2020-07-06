@@ -3,9 +3,17 @@
     using System;
 
     /// <summary>
-    /// This class offers methods for prompting the user
-    /// to input the number of miles, and then calculates
-    /// and outputs the equivalent number feet
+    /// This class offers three methods for converting
+    /// between distances.  It can prompt the user to
+    /// 
+    /// 1.  Enter the number of miles, and then calculates 
+    /// and outputs the number feet.
+    /// 
+    /// 2.  Enter the number of miles, and then calculates 
+    /// and outputs the number metres.
+    /// 
+    /// 3.  Enter the number of Kilometres and then calculates
+    /// the number of miles
     /// </summary>
     /// <author>
     /// Derek Peacock
