@@ -1,7 +1,6 @@
 ﻿namespace CO453_ConsoleAppAnswer
 {
     using System;
-    using System.Diagnostics;
 
     /// <summary>
     /// This class offers methods for prompting the use
@@ -64,14 +63,10 @@
             //    x++;
             //}
 
-
             for(int count = 0; count < MAXN_PEOPLE; count++)
             {
                 Console.WriteLine($" Count = {count}");
             }
-
-
-
 
         }
     }

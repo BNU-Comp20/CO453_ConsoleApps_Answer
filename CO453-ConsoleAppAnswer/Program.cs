@@ -15,14 +15,19 @@
             Console.WriteLine(" C# Console Applications 2020");
             Console.WriteLine("");
 
-            Distance converter = new Distance();
+            DistanceConverter14 converter = new DistanceConverter14();
 
-            LengthConverter converter2 = new LengthConverter();
+            converter.ConvertDistance();
+            //converter.ConvertFeetToMiles();
+            //converter.ConvertMilesToMetres();
+
+            //LengthConverter converter2 = new LengthConverter();
+
             //converter2.OutputFactors();
             //converter2.Execute();
 
             //converter.CalculateFeet();
-            converter.DoSomething();
+            //converter.DoSomething();
             //converter.CalculateMiles();
         }
     }

@@ -3,24 +3,30 @@
     using System;
 
     /// <summary>
-    /// This class offers a method for converting a given
-    /// distance measured in miles to the equivalent 
-    /// distance measured in feet.
+    /// This class offers three methods for converting
+    /// between distances.  It can prompt the user to
+    /// 
+    /// 1.  Enter the number of miles, and then calculates 
+    /// and outputs the number feet.
+    /// 
+    /// 2.  Enter the number of miles, and then calculates 
+    /// and outputs the number metres.
+    /// 
+    /// 3.  Enter the number of Kilometres and then calculates
+    /// the number of miles
     /// </summary>
     /// <author>
-    /// Derek Peacock
+    /// Derek Peacock version 1.3
     /// </author>
-    class DistanceConverter
+    public class DistanceConverter13
     {
         public const int FEET_IN_MILES = 5280;
         public const double METRES_IN_MILES = 1609.34;
-        public const double MILES_IN_KILOMETRES = 0.621371;
 
         // Distance Units
         private double miles;
         private double feet;
         private double metres;
-        private double kiloMetres;
 
         /// <summary>
         /// Calculate how many feet there are in the given miles
@@ -28,6 +34,9 @@
         public void ConvertMilesToFeet()
         {
             OutputHeading();
+            Console.WriteLine("  Converting miles to feet");
+            Console.WriteLine();
+
             InputMiles();
 
             feet = miles * FEET_IN_MILES;
@@ -38,9 +47,12 @@
         /// <summary>
         /// Calculate how many metres there are in the given miles
         /// </summary>
-        private void CalculateMetres()
+        public void ConvertMilesToMetres()
         {
             OutputHeading();
+            Console.WriteLine("  Converting miles to metres");
+            Console.WriteLine();
+
             InputMiles();
 
             metres = miles * METRES_IN_MILES;
@@ -50,26 +62,19 @@
 
 
         /// <summary>
-        /// Calculate how many Miles there are in the given Kilometres
+        /// Calculate how many Miles there are in the given Feet
         /// </summary>
-        private void CalculateMiles()
+        public void ConvertFeetToMiles()
         {
             OutputHeading();
-            InputKilometres();
+            Console.WriteLine("  Converting feet to miles");
+            Console.WriteLine();
 
-            miles = kiloMetres * MILES_IN_KILOMETRES;
+            InputFeet();
+
+            miles = feet / FEET_IN_MILES;
 
             OutputMiles();
-        }
-
-        /// <summary>
-        /// Prompt the user to input the number of kilometres
-        /// </summary>
-        private void InputKilometres()
-        {
-            Console.Write("  Enter the number of Kilometres >");
-            string value = Console.ReadLine();
-            kiloMetres = Convert.ToDouble(value);
         }
 
         /// <summary>
@@ -83,33 +88,42 @@
         }
 
         /// <summary>
+        /// Prompt the user to input the number of feet
+        /// </summary>
+        private void InputFeet()
+        {
+            Console.Write("  Enter the number of feet >");
+            string value = Console.ReadLine();
+            feet = Convert.ToDouble(value);
+        }
+
+        /// <summary>
         /// Output how many feet there are in the given miles
         /// </summary>
         private void OutputFeet()
         {
             Console.WriteLine();
-            Console.WriteLine($"  {miles} miles is {feet} feet!");
+            Console.WriteLine("  " + miles + " miles is " + feet + " feet!");
             Console.WriteLine();
         }
 
         /// <summary>
-        /// Output the number of metres in the given distance in miles
-        /// </summary>
-        private void OutputMetres()
-        {
-            Console.WriteLine();
-            Console.WriteLine($"  {miles} miles is {metres} metres!");
-            Console.WriteLine();
-        }
-
-
-        /// <summary>
-        /// Output the number of miles in the given distance in Kilometres
+        /// Output how many miles there are in the given feet
         /// </summary>
         private void OutputMiles()
         {
             Console.WriteLine();
-            Console.WriteLine("  " + kiloMetres + " Kilometres is " + miles + " miles!");
+            Console.WriteLine("  " + feet + " feet is " + miles + " miles!");
+            Console.WriteLine();
+        }
+
+        /// <summary>
+        /// Output how many metres there are in the given miles
+        /// </summary>
+        private void OutputMetres()
+        {
+            Console.WriteLine();
+            Console.WriteLine("  " + miles + " miles is " + metres + " metres!");
             Console.WriteLine();
         }
 
@@ -126,6 +140,4 @@
             Console.WriteLine();
         }
     }
-
 }
-
