@@ -1,6 +1,4 @@
-﻿
-
-using System;
+﻿using System;
 
 namespace CO453_ConsoleAppAnswer
 {
@@ -36,7 +34,6 @@ namespace CO453_ConsoleAppAnswer
 
         private string fromUnit;
         private string toUnit;
-
 
         /// <summary>
         /// Output the heading and then prompt the user to
@@ -92,7 +89,6 @@ namespace CO453_ConsoleAppAnswer
             {
                 toDistance = fromDistance / FEET_IN_METRES;
             }
-
         }
 
         /// <summary>
@@ -177,6 +173,5 @@ namespace CO453_ConsoleAppAnswer
 
             return unit;
         }
-
-    }
+    } // end class
 }
