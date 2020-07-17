@@ -5,17 +5,10 @@ using System;
 namespace CO453_ConsoleAppAnswer
 {
     /// <summary>
-    /// This class offers three methods for converting
-    /// between distances.  It can prompt the user to
-    /// 
-    /// 1.  Enter the number of miles, and then calculates 
-    /// and outputs the number feet.
-    /// 
-    /// 2.  Enter the number of miles, and then calculates 
-    /// and outputs the number metres.
-    /// 
-    /// 3.  Enter the number of Kilometres and then calculates
-    /// the number of miles
+    /// This class offers the user a way of converting
+    /// between distances measured in Miles, Metre or Feet
+    /// The user can select any combination of from and
+    /// to distance units.
     /// </summary>
     /// <author>
     /// Derek Peacock version 1.4
@@ -46,7 +39,10 @@ namespace CO453_ConsoleAppAnswer
 
 
         /// <summary>
-        /// Calculate how many feet there are in the given miles
+        /// Output the heading and then prompt the user to
+        /// select the from and to distance units.  The
+        /// entered distance is then converted from one
+        /// to the other distance units.
         /// </summary>
         public void ConvertDistance()
         {
@@ -60,7 +56,19 @@ namespace CO453_ConsoleAppAnswer
 
             fromDistance = InputDistance($"  Enter distance in {fromUnit} > ");
 
-            if((fromUnit == MILES) && (toUnit == FEET))
+            PerformConversion();
+
+            OutputDistance();
+        }
+
+
+        /// <summary>
+        /// Convert the fromDistance to the toDistance based
+        /// on which fromUnits and toUnits have been selected
+        /// </summary>
+        private void PerformConversion()
+        {
+            if ((fromUnit == MILES) && (toUnit == FEET))
             {
                 toDistance = fromDistance * FEET_IN_MILES;
             }
@@ -68,17 +76,28 @@ namespace CO453_ConsoleAppAnswer
             {
                 toDistance = fromDistance / FEET_IN_MILES;
             }
+            else if ((fromUnit == MILES) && (toUnit == METRES))
+            {
+                toDistance = fromDistance * METRES_IN_MILES;
+            }
+            else if ((fromUnit == METRES) && (toUnit == MILES))
+            {
+                toDistance = fromDistance / METRES_IN_MILES;
+            }
+            else if ((fromUnit == FEET) && (toUnit == METRES))
+            {
+                toDistance = fromDistance * FEET_IN_METRES;
+            }
+            else if ((fromUnit == METRES) && (toUnit == FEET))
+            {
+                toDistance = fromDistance / FEET_IN_METRES;
+            }
 
-            OutputDistance();
-        }
-
-        private void InputFeet()
-        {
-            throw new NotImplementedException();
         }
 
         /// <summary>
-        /// Prompt the user to input a distance as a double number
+        /// Display the prompt and ask the user to input a 
+        /// distance as a double number
         /// </summary>
         private double InputDistance(string prompt)
         {
@@ -111,6 +130,11 @@ namespace CO453_ConsoleAppAnswer
             Console.WriteLine();
         }
 
+        /// <summary>
+        /// Display a list of distance units and return
+        /// the unit selected by the user.  Invalid
+        /// choices will cause issues.
+        /// </summary>
         private string SelectUnit(string prompt)
         {
             Console.WriteLine();
@@ -140,19 +164,15 @@ namespace CO453_ConsoleAppAnswer
             Console.WriteLine($"  You have selected {unit}");
             Console.WriteLine();
 
-            switch (choice)
-            {
-                case "1": unit = FEET; break;
-                case "2": unit = METRES; break;
-                case "3": unit = MILES; break;
+            // Alternative to the if..else
 
-                default: unit = "INVALID CHOICE"; break;
-            }
-
-            //if (unit == DistanceUnit.NoUnit)
+            //switch (choice)
             //{
-            //    Console.WriteLine("Invalid Choice!");
-            //    Console.WriteLine("Must be a digit 1 to 4");
+            //    case "1": unit = FEET; break;
+            //    case "2": unit = METRES; break;
+            //    case "3": unit = MILES; break;
+
+            //    default: unit = "INVALID CHOICE"; break;
             //}
 
             return unit;
