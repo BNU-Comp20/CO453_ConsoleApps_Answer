@@ -8,16 +8,27 @@
     /// <author>
     /// Derek Peacock
     /// </author>
-    class Program
+    public static class Program
     {
-        static void Main()
+        public static void Main()
         {
-            Console.WriteLine(" C# Console Applications 2020");
-            Console.WriteLine("");
+            UserLib.OutputHeading(" C# Console Applications 2020");
 
-            DistanceConverter14 converter = new DistanceConverter14();
+            string [] choices = { "Distance Converter", "BMI Calculator", "Quit" };
+            int choiceNo = UserLib.SelectChoice(choices);
 
-            converter.ConvertDistance();
+            if (choiceNo == 1)
+            {
+                DistanceConverter15 converter = new DistanceConverter15();
+                converter.ConvertDistance();
+            }
+            else if (choiceNo == 2)
+            {
+                BMI bmi = new BMI();
+                bmi.CalculateIndex();
+            }
+            
+            
             //converter.ConvertFeetToMiles();
             //converter.ConvertMilesToMetres();
 

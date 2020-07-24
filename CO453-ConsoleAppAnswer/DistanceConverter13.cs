@@ -1,19 +1,18 @@
-﻿namespace CO453_ConsoleAppAnswer
-{
-    using System;
+﻿using System;
+using System.Text;
 
+
+
+
+namespace CO453_ConsoleAppAnswer
+{
     /// <summary>
     /// This class offers three methods for converting
     /// between distances.  It can prompt the user to
     /// 
-    /// 1.  Enter the number of miles, and then calculates 
-    /// and outputs the number feet.
-    /// 
-    /// 2.  Enter the number of miles, and then calculates 
-    /// and outputs the number metres.
-    /// 
-    /// 3.  Enter the number of Kilometres and then calculates
-    /// the number of miles
+    /// 1.  To convert from Miles to Feet
+    /// 2.  To Convert from Feet to Miles
+    /// 3.  To Convert from Miles to Metres
     /// </summary>
     /// <author>
     /// Derek Peacock version 1.3

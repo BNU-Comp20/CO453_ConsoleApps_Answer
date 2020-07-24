@@ -153,13 +153,16 @@ namespace CO453_ConsoleAppAnswer
         }
 
 
+        /// <summary>
+        /// Display a menu of distance units and then prompt the
+        /// user to select one and return it.
+        /// </summary>
         private DistanceUnit SelectUnit(string prompt)
         {
             Console.WriteLine();
-            Console.WriteLine(" 1. Feet");
-            Console.WriteLine(" 2. Metres");
-            Console.WriteLine(" 3. Kilometres");
-            Console.WriteLine(" 4. Miles");
+            Console.WriteLine($" 1. {DistanceUnit.Feet}");
+            Console.WriteLine($" 2. {DistanceUnit.Metres}");
+            Console.WriteLine($" 3. {DistanceUnit.Miles}");
             Console.WriteLine();
 
             Console.Write(prompt);
@@ -167,29 +170,10 @@ namespace CO453_ConsoleAppAnswer
 
             DistanceUnit unit;
 
-            if (choice == "1")
-            {
-                unit = DistanceUnit.Feet;
-            }
-            else if (choice == "2")
-            {
-                unit = DistanceUnit.Metres;
-            }
-            else if (choice == "3")
-            {
-                unit = DistanceUnit.Kilometres;
-            }
-            else if (choice == "4")
-            {
-                unit = DistanceUnit.Miles;
-            }
-            else unit = DistanceUnit.NoUnit;
-
             switch (choice)
             {
                 case "1": unit = DistanceUnit.Feet; break;
                 case "2": unit = DistanceUnit.Metres; break;
-                case "3": unit = DistanceUnit.Kilometres; break;
                 case "4": unit = DistanceUnit.Miles; break;
 
                 default: unit = DistanceUnit.NoUnit; break;
@@ -198,7 +182,7 @@ namespace CO453_ConsoleAppAnswer
             if (unit == DistanceUnit.NoUnit)
             {
                 Console.WriteLine("Invalid Choice!");
-                Console.WriteLine("Must be a digit 1 to 4");
+                Console.WriteLine("Must be a digit 1 to 3");
             }
 
             return unit;

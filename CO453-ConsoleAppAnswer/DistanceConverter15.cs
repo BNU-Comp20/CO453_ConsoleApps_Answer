@@ -1,20 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace CO453_ConsoleAppAnswer
 {
-
-    /// <summary>
-    /// Choice of units used to measure distance
-    /// </summary>
-    public enum DistanceUnits
-    {
-        NoUnit,
-        Feet,
-        Metres,
-        Kilometres,
-        Miles
-    }
-
     /// <summary>
     /// This class offers the user a way of converting
     /// between distances measured in Miles, Metre or Feet
@@ -22,9 +11,9 @@ namespace CO453_ConsoleAppAnswer
     /// to distance units.
     /// </summary>
     /// <author>
-    /// Derek Peacock version 1.4
+    /// Derek Peacock version 1.5
     /// </author>
-    class DistanceConverter14
+    class DistanceConverter15
     {
         // Distance conversion constants
 
@@ -57,10 +46,10 @@ namespace CO453_ConsoleAppAnswer
         {
             OutputHeading();
 
-            fromUnit = SelectUnit("  Select distance unit to convert from > ");
-            toUnit = SelectUnit("  Select distance unit to conver to > ");
+            fromUnit = SelectUnit(" Select distance unit to convert from > ");
+            toUnit = SelectUnit(" Select distance unit to conver to > ");
 
-            Console.WriteLine($"  Converting {fromUnit} to {toUnit}");
+            Console.WriteLine($" Converting {fromUnit} to {toUnit}");
             Console.WriteLine();
 
             fromDistance = InputDistance($"  Enter distance in {fromUnit} > ");
@@ -121,7 +110,7 @@ namespace CO453_ConsoleAppAnswer
         private void OutputDistance()
         {
             Console.WriteLine();
-            Console.WriteLine($"  {fromDistance} {fromUnit} is {toDistance} {toUnit} !");
+            Console.WriteLine($" {fromDistance} {fromUnit} is {toDistance} {toUnit} !");
             Console.WriteLine();
         }
 
@@ -131,10 +120,10 @@ namespace CO453_ConsoleAppAnswer
         private void OutputHeading()
         {
             Console.WriteLine();
-            Console.WriteLine("  -----------------------------");
-            Console.WriteLine("         Convert Distances     ");
-            Console.WriteLine("         by Derek Peacock      ");
-            Console.WriteLine("  -----------------------------");
+            Console.WriteLine(" -----------------------------");
+            Console.WriteLine("        Convert Distances     ");
+            Console.WriteLine("        by Derek Peacock      ");
+            Console.WriteLine(" -----------------------------");
             Console.WriteLine();
         }
 
@@ -144,31 +133,30 @@ namespace CO453_ConsoleAppAnswer
         /// </summary>
         private string SelectUnit(string prompt)
         {
-            Console.WriteLine();
-            Console.WriteLine($" 1. {FEET}");
-            Console.WriteLine($" 2. {METRES}");
-            Console.WriteLine($" 3. {MILES}");
-            Console.WriteLine();
+            Console.WriteLine(prompt);
 
-            Console.Write(prompt);
-            string choice = Console.ReadLine();
+            string[] choices = { $" {FEET}", 
+                                 $" {METRES}", 
+                                 $" {MILES}" };
 
-            string unit = "INVALID CHOICE";
+            int choice = UserLib.SelectChoice(choices);
 
-            if (choice == "1")
+            string unit;
+
+            if (choice == 1)
             {
                 unit = FEET;
             }
-            else if (choice == "2")
+            else if (choice == 2)
             {
                 unit = METRES;
             }
-            else if (choice == "3")
+            else
             {
                 unit = MILES;
             }
 
-            Console.WriteLine($"  You have selected {unit}");
+            Console.WriteLine($" You have selected {unit}");
             Console.WriteLine();
 
             // Alternative to the if..else
@@ -185,4 +173,5 @@ namespace CO453_ConsoleAppAnswer
             return unit;
         }
     } // end class
+
 }
