@@ -1,6 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace CO453_ConsoleAppAnswer
 {
@@ -13,7 +11,7 @@ namespace CO453_ConsoleAppAnswer
     /// <author>
     /// Derek Peacock version 1.5
     /// </author>
-    class DistanceConverter15
+    public class DistanceConverter15
     {
         // Distance conversion constants
 
@@ -27,15 +25,15 @@ namespace CO453_ConsoleAppAnswer
         public const string MILES = "Miles";
         public const string METRES = "Metres";
 
-        // Distance variables
+        // Distance properties
 
-        private double fromDistance;
-        private double toDistance;
+        public double fromDistance { get; set; }
+        public double toDistance { get; set; }
 
-        // Unit variables
+        // Unit properties
 
-        private string fromUnit;
-        private string toUnit;
+        public string fromUnit { get; set; }
+        public string toUnit { get; set; }
 
         /// <summary>
         /// Output the heading and then prompt the user to select the 
@@ -64,7 +62,7 @@ namespace CO453_ConsoleAppAnswer
         /// Convert the fromDistance to the toDistance based
         /// on which fromUnits and toUnits have been selected
         /// </summary>
-        private void PerformConversion()
+        public void PerformConversion()
         {
             if ((fromUnit == MILES) && (toUnit == FEET))
             {

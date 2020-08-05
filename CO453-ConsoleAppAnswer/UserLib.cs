@@ -1,5 +1,5 @@
 ﻿using System;
-using System.ComponentModel.DataAnnotations;
+
 
 namespace CO453_ConsoleAppAnswer
 {
@@ -23,7 +23,7 @@ namespace CO453_ConsoleAppAnswer
         /// This method will display a list of numbered choices
         /// and will ask the user to select one and return it
         /// </summary>
-        public static int SelectChoice(string [] choices)
+        public static int SelectChoice(string[] choices)
         {
             int choiceNo;
             int lastChoice = choices.Length;
@@ -35,7 +35,7 @@ namespace CO453_ConsoleAppAnswer
             {
                 DisplayChoices(choices);
 
-                choiceNo = InputNumber(" Please enter your choice > ");
+                choiceNo = (int)InputNumber(" Please enter your choice > ");
 
                 if ((choiceNo < 1) || (choiceNo > lastChoice))
                 {
@@ -52,7 +52,7 @@ namespace CO453_ConsoleAppAnswer
         /// <summary>
         /// Display a list of choices as a numbered list
         /// </summary>
-        private static void DisplayChoices(string [] choices)
+        private static void DisplayChoices(string[] choices)
         {
             Console.WriteLine();
 
@@ -67,13 +67,13 @@ namespace CO453_ConsoleAppAnswer
         }
 
         /// <summary>
-        /// Prompt the user to enter a valid integer value 
+        /// Prompt the user to enter a valid number  
         /// which is returned
         /// </summary>
-        private static int InputNumber(string prompt)
+        public static double InputNumber(string prompt)
         {
-            int number = 0;
-            bool validInt;
+            double number = 0;
+            bool Isvalid;
 
             do
             {
@@ -82,18 +82,42 @@ namespace CO453_ConsoleAppAnswer
 
                 try
                 {
-                    number = Convert.ToInt16(value);
-                    validInt = true;
+                    number = Convert.ToDouble(value);
+                    Isvalid = true;
                 }
                 catch (Exception)
                 {
-                    validInt = false;
-                    Console.WriteLine(" INVALID INTEGER");
+                    Isvalid = false;
+                    Console.WriteLine(" INVALID NUMBER!");
                 }
 
-            } while (!validInt);
+            } while (!Isvalid);
 
             return number;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        public static double InputNumber(string prompt, double min, double max)
+        {
+            bool isValid;
+            double number;
+
+            do
+            {
+                number = InputNumber(prompt);
+
+                if (number < min || number > max)
+                {
+                    isValid = false;
+                    Console.WriteLine($"Number must be between {min} and {max} ");
+                }
+                else isValid = true;
+
+            } while (!isValid);
+
+            return number; 
         }
     }
 }

@@ -1,6 +1,8 @@
-﻿namespace CO453_ConsoleAppAnswer
+﻿using CO453_ConsoleAppAnswer.Week03;
+
+namespace CO453_ConsoleAppAnswer
 {
-    using System;
+
     /// <summary>
     /// This class runs first and create a DistanceConverter
     /// allowing the user three ways of converting distances
@@ -10,11 +12,40 @@
     /// </author>
     public static class Program
     {
+        public static Network01 Network { get; set; }
+
+        public static StudentGradesApp StudentGradesApp
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public static StudentGrades StudentGrades
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
+        public static Distance0 Distance0
+        {
+            get => default;
+            set
+            {
+            }
+        }
+
         public static void Main()
         {
             UserLib.OutputHeading(" C# Console Applications 2020");
 
-            string [] choices = { "Distance Converter", "BMI Calculator", "Quit" };
+            string [] choices = { 
+                "Distance Converter", "BMI Calculator",
+                "Student Grades", "Network", "Quit" };
+
             int choiceNo = UserLib.SelectChoice(choices);
 
             if (choiceNo == 1)
@@ -27,8 +58,17 @@
                 BMI bmi = new BMI();
                 bmi.CalculateIndex();
             }
-            
-            
+            else if (choiceNo == 3)
+            {
+                StudentGrades app = new StudentGrades();
+                app.OutputMenu();
+            }
+            else if (choiceNo == 4)
+            {
+                Network01 network = new Network01();
+                network.Run();
+            }
+
             //converter.ConvertFeetToMiles();
             //converter.ConvertMilesToMetres();
 
