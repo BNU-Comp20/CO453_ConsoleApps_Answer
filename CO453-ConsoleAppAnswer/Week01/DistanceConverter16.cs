@@ -1,18 +1,17 @@
 ﻿using System;
 
-namespace CO453_ConsoleAppAnswer
+namespace CO453_ConsoleAppAnswer.Week01
 {
-
     /// <summary>
     /// This class offers the user a way of converting
     /// between distances measured in Miles, Metre or Feet
     /// The user can select any combination of from and
-    /// to distance units.
+    /// to distance units.  Uses UserLib
     /// </summary>
     /// <author>
-    /// Derek Peacock App01: Version 1.5
+    /// Derek Peacock App01: Version 1.6
     /// </author>
-    public class DistanceConverter15
+    public class DistanceConverter16
     {
         // Distance conversion constants
 
@@ -60,32 +59,32 @@ namespace CO453_ConsoleAppAnswer
         /// </summary>
         public void PerformConversion()
         {
-            if ((FromUnit == DistanceUnit.Miles) && 
+            if ((FromUnit == DistanceUnit.Miles) &&
                 (ToUnit == DistanceUnit.Feet))
             {
                 ToDistance = FromDistance * FEET_IN_MILES;
             }
-            else if ((FromUnit == DistanceUnit.Feet) && 
+            else if ((FromUnit == DistanceUnit.Feet) &&
                      (ToUnit == DistanceUnit.Miles))
             {
                 ToDistance = FromDistance / FEET_IN_MILES;
             }
-            else if ((FromUnit == DistanceUnit.Miles) && 
+            else if ((FromUnit == DistanceUnit.Miles) &&
                      (ToUnit == DistanceUnit.Metres))
             {
                 ToDistance = FromDistance * METRES_IN_MILES;
             }
-            else if ((FromUnit == DistanceUnit.Metres) && 
+            else if ((FromUnit == DistanceUnit.Metres) &&
                      (ToUnit == DistanceUnit.Miles))
             {
                 ToDistance = FromDistance / METRES_IN_MILES;
             }
-            else if ((FromUnit == DistanceUnit.Feet) && 
+            else if ((FromUnit == DistanceUnit.Feet) &&
                      (ToUnit == DistanceUnit.Metres))
             {
                 ToDistance = FromDistance * FEET_IN_METRES;
             }
-            else if ((FromUnit == DistanceUnit.Metres) && 
+            else if ((FromUnit == DistanceUnit.Metres) &&
                      (ToUnit == DistanceUnit.Feet))
             {
                 ToDistance = FromDistance / FEET_IN_METRES;
@@ -133,11 +132,12 @@ namespace CO453_ConsoleAppAnswer
         /// </summary>
         private DistanceUnit SelectUnit(string prompt)
         {
-            string[] choices = { $" {DistanceUnit.Feet}", 
-                                 $" {DistanceUnit.Metres}", 
+            Console.WriteLine(prompt);
+
+            string[] choices = { $" {DistanceUnit.Feet}",
+                                 $" {DistanceUnit.Metres}",
                                  $" {DistanceUnit.Miles}"};
 
-            Console.WriteLine(prompt);
             int choice = UserLib.SelectChoice(choices);
 
             DistanceUnit unit;
@@ -150,11 +150,10 @@ namespace CO453_ConsoleAppAnswer
             {
                 unit = DistanceUnit.Metres;
             }
-            else if(choice == 3)
+            else
             {
                 unit = DistanceUnit.Miles;
             }
-            else unit = DistanceUnit.NoUnit;
 
             Console.WriteLine($" You have selected {unit}");
             Console.WriteLine();

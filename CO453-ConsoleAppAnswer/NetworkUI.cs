@@ -1,19 +1,16 @@
-﻿using CO453_ConsoleAppAnswer.BlueJ_08;
+﻿using CO453_ConsoleAppAnswer.Week04;
 using System;
 
 namespace CO453_ConsoleAppAnswer
 {
-    public class Network01
+    /// <summary>
+    /// This class provides a user interface for the Network
+    /// example whereby users can post messages and photos.
+    /// Users can also add comments and like/unlike posts.
+    /// </summary>
+    public class NetworkUI
     {
-        private NewsFeed news = new NewsFeed();
-
-        public NewsFeed NewsFeed
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        private readonly NewsFeed news = new NewsFeed();
 
         public void Run()
         {
@@ -22,7 +19,7 @@ namespace CO453_ConsoleAppAnswer
             UserLib.OutputHeading("      Derek's News Daily");
 
             string[] choices = new string[]
-                { "Add Message", "Add Photo", "Quit" };
+                { "Add Message", "Add Photo", "Display All", "Quit" };
 
             do
             {
@@ -32,20 +29,21 @@ namespace CO453_ConsoleAppAnswer
                 {
                     case 1: AddMessage(); break;
                     case 2: AddPhoto(); break;
-                    case 3: quit = true; break;
+                    case 3: Display(); break;
+                    case 4: quit = true; break;
 
                     default:
                         break;
                 }
-
-                news.Show();
 
             } while (!quit);
         }
 
         private void AddPhoto()
         {
-            UserLib.OutputHeading("      Adding a Photo");
+            Console.WriteLine("\n Adding a Photo");
+            Console.WriteLine("---------------");
+            Console.WriteLine();
 
             Console.Write(" Enter your name > ");
             string name = Console.ReadLine();
@@ -57,12 +55,14 @@ namespace CO453_ConsoleAppAnswer
             string caption = Console.ReadLine();
 
             PhotoPost post = new PhotoPost(name, filename, caption);
-            news.AddPhotoPost(post);
+            news.AddPost(post);
         }
 
         private void AddMessage()
         {
-            UserLib.OutputHeading("      Adding a Message");
+            Console.WriteLine("\n Adding a Message");
+            Console.WriteLine(" ----------------");
+            Console.WriteLine();
 
             Console.Write(" Enter your name > ");
             string name = Console.ReadLine();
@@ -71,7 +71,12 @@ namespace CO453_ConsoleAppAnswer
             string message = Console.ReadLine();
 
             MessagePost post = new MessagePost(name, message);
-            news.AddMessagePost(post);
+            news.AddPost(post);
+        }
+
+        private void Display()
+        {
+            news.Display();
         }
     }
 }

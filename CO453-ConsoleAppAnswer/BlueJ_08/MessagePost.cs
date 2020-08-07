@@ -4,48 +4,60 @@ using System.Collections.Generic;
 
 namespace CO453_ConsoleAppAnswer.BlueJ_08
 {
-    /**
-     * This class stores information about a post in a social network. 
-     * The main part of the post consists of a (possibly multi-line)
-     * text message. Other data, such as author and time, are also stored.
-     * 
-     * @author Michael Kölling and David J. Barnes
-     * @version 0.1
-     */
+    ///<summary>
+    /// This class stores information about a post in a social network. 
+    /// The main part of the post consists of a (possibly multi-line)
+    /// text message. Other data, such as author and time, are also stored.
+    /// </summary>
+    /// <author>
+    /// Michael Kölling and David J. Barnes
+    /// version 0.1
+    /// </author>
     public class MessagePost
     {
-        private String username;  // username of the post's author
-        private String message;   // an arbitrarily long, multi-line message
-        private DateTime timestamp;
-        private int likes;
-        private List<String> comments;
+        // username of the post's author
+        public String Username { get; }
 
-        /**
-         * Constructor for objects of class MessagePost.
-         * 
-         * @param author    The username of the author of this post.
-         * @param text      The text of this post.
-         */
+        // an arbitrarily long, multi-line message
+        public String Message { get; }
+
+        public DateTime Timestamp { get; }
+
+        private int likes;
+
+        private readonly List<String> comments;
+
+
+        /// <summary>
+        /// Constructor for objects of class MessagePost.
+        /// </summary>
+        /// <param name="author">
+        /// The username of the author of this post.
+        /// </param>
+        /// <param name="text">
+        /// The text of this post.
+        /// </param>
         public MessagePost(String author, String text)
         {
-            username = author;
-            message = text;
-            timestamp = DateTime.Now;
+            Username = author;
+            Message = text;
+            Timestamp = DateTime.Now;
+
             likes = 0;
             comments = new List<String>();
         }
 
-        /**
-         * Record one more 'Like' indication from a user.
-         */
+        ///<summary>
+        /// Record one more 'Like' indication from a user.
+        ///</summary>
         public void Like()
         {
             likes++;
         }
 
-        /**
-         * Record that a user has withdrawn his/her 'Like' vote.
-         */
+        ///<summary>
+        /// Record that a user has withdrawn his/her 'Like' vote.
+        ///</summary>
         public void Unlike()
         {
             if (likes > 0)
@@ -54,48 +66,30 @@ namespace CO453_ConsoleAppAnswer.BlueJ_08
             }
         }
 
-        /**
-         * Add a comment to this post.
-         * 
-         * @param text  The new comment to add.
-         */
+        ///<summary>
+        /// Add a comment to this post.
+        /// </summary>
+        /// <param name="text">
+        /// The new comment to add.
+        /// </param>        
         public void AddComment(String text)
         {
             comments.Add(text);
         }
 
-        /**
-         * Return the text of this post.
-         * 
-         * @return The post's text.
-         */
-        public String GetText()
-        {
-            return message;
-        }
 
-        /**
-         * Return the time of creation of this post.
-         * 
-         * @return The post's creation time, as a system time value.
-         */
-        public DateTime GetTimeStamp()
-        {
-            return timestamp;
-        }
-
-        /**
-         * Display the details of this post.
-         * 
-         * (Currently: Print to the text terminal. This is simulating display 
-         * in a web browser for now.)
-         */
+        ///<summary>
+        /// Display the details of this post.
+        /// 
+        /// (Currently: Print to the text terminal. This is simulating display 
+        /// in a web browser for now.)
+        ///</summary>
         public void Display()
         {
             Console.WriteLine();
-            Console.WriteLine($"    Author: {username}");
-            Console.WriteLine($"    Message: {message}");
-            Console.WriteLine($"    Time Elpased: {TimeString(timestamp)}");
+            Console.WriteLine($"    Author: {Username}");
+            Console.WriteLine($"    Message: {Message}");
+            Console.WriteLine($"    Time Elpased: {FormatElapsedTime(Timestamp)}");
             Console.WriteLine();
 
             if (likes > 0)
@@ -117,15 +111,18 @@ namespace CO453_ConsoleAppAnswer.BlueJ_08
             }
         }
 
-        /**
-         * Create a string describing a time point in the past in terms 
-         * relative to current time, such as "30 seconds ago" or "7 minutes ago".
-         * Currently, only seconds and minutes are used for the string.
-         * 
-         * @param time  The time value to convert (in system milliseconds)
-         * @return      A relative time string for the given time
-         */
-        private String TimeString(DateTime time)
+        ///<summary>
+        /// Create a string describing a time point in the past in terms 
+        /// relative to current time, such as "30 seconds ago" or "7 minutes ago".
+        /// Currently, only seconds and minutes are used for the string.
+        /// </summary>
+        /// <param name="time">
+        ///  The time value to convert (in system milliseconds)
+        /// </param> 
+        /// <returns>
+        /// A relative time string for the given time
+        /// </returns>      
+        private String FormatElapsedTime(DateTime time)
         {
             DateTime current = DateTime.Now;
             TimeSpan timePast = current - time; 

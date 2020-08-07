@@ -2,57 +2,36 @@
 using System.Collections.Generic;
 
 
-namespace CO453_ConsoleAppAnswer.BlueJ_08
+namespace CO453_ConsoleAppAnswer.Week04
 {
     ///<summary>
-    /// This class stores information about a post in a social network. 
-    /// The main part of the post consists of a photo and a caption. 
-    /// Other data, such as author and time, are also stored.
+    /// This class stores general information about a post 
+    /// in a social network. Posts can be added, liked, unliked
+    /// and displayed
     ///</summary>
     /// <author>
     /// Michael Kölling and David J. Barnes
-    /// @version 0.1
+    /// @version 0.2
     /// </author>
-    public class PhotoPost
+    public class Post
     {
         // username of the post's author
         public String Username { get; set; }
-
-        // the name of the image file
-        public String Filename { get; set; }
-        
-        // a one line image caption
-        public String Caption { get; set; }   
-        
         public DateTime Timestamp { get; }
 
         private int likes;
-        
-        private readonly  List<String> comments;
 
-        ///<summary>
-        /// Constructor for objects of class PhotoPost.
-        ///</summary>
-        /// <param name="author">
-        /// The username of the author of this post.
-        /// </param>
-        /// <param name="caption">
-        /// A caption for the image.
-        /// </param>
-        /// <param name="filename">
-        /// The filename of the image in this post.
-        /// </param>
-        public PhotoPost(String author, String filename, String caption)
+        private readonly List<String> comments;
+        
+        
+        public Post(String author)
         {
             Username = author;
-            this.Filename = filename;
-            this.Caption = caption;
             Timestamp = DateTime.Now;
 
             likes = 0;
             comments = new List<String>();
         }
-
 
         ///<summary>
         /// Record one more 'Like' indication from a user.
@@ -61,7 +40,6 @@ namespace CO453_ConsoleAppAnswer.BlueJ_08
         {
             likes++;
         }
-
 
         ///<summary>
         /// Record that a user has withdrawn his/her 'Like' vote.
@@ -74,13 +52,12 @@ namespace CO453_ConsoleAppAnswer.BlueJ_08
             }
         }
 
-
         ///<summary>
         /// Add a comment to this post.
-        ///</summary>
+        /// </summary>
         /// <param name="text">
         /// The new comment to add.
-        /// </param>
+        /// </param>        
         public void AddComment(String text)
         {
             comments.Add(text);
@@ -93,51 +70,27 @@ namespace CO453_ConsoleAppAnswer.BlueJ_08
         /// (Currently: Print to the text terminal. This is simulating display 
         /// in a web browser for now.)
         ///</summary>
-        public void Display()
+        public virtual void Display()
         {
-            Console.WriteLine();
-            Console.WriteLine($"    Author: {Username}");
-            Console.WriteLine($"    Filename: [{Filename}]");
-            Console.WriteLine($"    Caption: {Caption}");
-            Console.WriteLine($"    Time Elpased: {FormatElapsedTime(Timestamp)}");
-            Console.WriteLine();
-
-            if (likes > 0)
-            {
-                Console.WriteLine($"    Likes: -  {likes}  people like this.");
-            }
-            else
-            {
-                Console.WriteLine();
-            }
-
-            if (comments.Count == 0)
-            {
-                Console.WriteLine("    No comments.");
-            }
-            else
-            {
-                Console.WriteLine($"    Comment(s): {comments.Count}  Click here to view.");
-            }
+            Console.WriteLine(ToString());
         }
 
-
-        /// <summary>
+        ///<summary>
         /// Create a string describing a time point in the past in terms 
         /// relative to current time, such as "30 seconds ago" or "7 minutes ago".
         /// Currently, only seconds and minutes are used for the string.
         /// </summary>
         /// <param name="time">
-        /// The time value to convert (in system milliseconds)
+        ///  The time value to convert (in system milliseconds)
         /// </param> 
         /// <returns>
         /// A relative time string for the given time
-        /// </returns>  
+        /// </returns>      
         private String FormatElapsedTime(DateTime time)
         {
             DateTime current = DateTime.Now;
-            TimeSpan timePast = current - time; 
-            
+            TimeSpan timePast = current - time;
+
             long seconds = (long)timePast.TotalSeconds;
             long minutes = seconds / 60;
 
@@ -149,6 +102,38 @@ namespace CO453_ConsoleAppAnswer.BlueJ_08
             {
                 return seconds + " seconds ago";
             }
+        }
+
+
+        /// <summary>
+        /// Return as text the author's name, the time elapsed,
+        /// the number of likes and how many comments the post has
+        /// </summary>
+        public override string ToString()
+        {
+            string text = $"    Author: {Username} \n";
+
+            text += $"    Time Elpased: {FormatElapsedTime(Timestamp)} \n\n";
+
+            if (likes > 0)
+            {
+                text += $"    Likes:  {likes}  people like this. \n";
+            }
+            else
+            {
+                text += "\n";
+            }
+
+            if (comments.Count == 0)
+            {
+                text += "    No comments.\n";
+            }
+            else
+            {
+                text += $"    {comments.Count}  comment(s). Click here to view.\n";
+            }
+
+            return text;
         }
     }
 }

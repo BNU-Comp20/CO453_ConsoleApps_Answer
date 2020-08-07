@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CO453_ConsoleAppAnswer
+namespace CO453_ConsoleAppAnswer.Week03
 {
     /// <summary>
     /// Grade A is First Class   : 70 - 100
@@ -25,7 +25,7 @@ namespace CO453_ConsoleAppAnswer
     /// 
     /// </summary>
     /// <Author>
-    /// Derek Peacock Version 1.0
+    /// Derek Peacock App03: Version 1.0
     /// </Author>
     public class StudentGrades
     {
@@ -49,14 +49,6 @@ namespace CO453_ConsoleAppAnswer
         public int Minimum { get; set; }
 
         public int Maximum { get; set; }
-
-        public Grade Grade
-        {
-            get => default;
-            set
-            {
-            }
-        }
 
 
         /// <summary>

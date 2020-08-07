@@ -1,5 +1,5 @@
 ﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
-using CO453_ConsoleAppAnswer;
+using CO453_ConsoleAppAnswer.Week03;
 
 
 namespace ConsoleApp.UnitTest
@@ -84,7 +84,7 @@ namespace ConsoleApp.UnitTest
             // Arrange
 
             studentGrades.Marks = StatsMarks;
-            bool expectedProfile = false;
+            bool expectedProfile;
             
             // Act
 

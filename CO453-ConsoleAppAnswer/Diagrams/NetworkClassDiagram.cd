@@ -1,61 +1,37 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="CO453_ConsoleAppAnswer.Network01">
-    <Position X="3" Y="0.5" Width="1.5" />
+  <Class Name="CO453_ConsoleAppAnswer.NetworkUI">
+    <Position X="0.5" Y="3" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAEAAAAAAAIAAAAAAAAAAAAAAAAAAAAAAAAAQAABAAI=</HashCode>
-      <FileName>Network01.cs</FileName>
+      <HashCode>AAEAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAQAABAAI=</HashCode>
+      <FileName>NetworkUI.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="NewsFeed" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="CO453_ConsoleAppAnswer.Program">
     <Position X="0.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAABAQAAAA=</HashCode>
+      <HashCode>AAAAAIAAAAAAQAAAAAAAAAAAAAAAAABAAAAABAQAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="Network01" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="CO453_ConsoleAppAnswer.BlueJ_08.NewsFeed">
-    <Position X="5.5" Y="0.5" Width="1.5" />
-    <AssociationLine Name="PhotoPost" Type="CO453_ConsoleAppAnswer.BlueJ_08.PhotoPost" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="5.969" Y="2.824" />
-        <Point X="5.969" Y="4.25" />
-        <Point X="5.25" Y="4.25" />
-      </Path>
-    </AssociationLine>
-    <AssociationLine Name="MessagePost" Type="CO453_ConsoleAppAnswer.BlueJ_08.MessagePost" FixedFromPoint="true" FixedToPoint="true">
-      <Path>
-        <Point X="6.516" Y="2.824" />
-        <Point X="6.516" Y="4.062" />
-        <Point X="7.25" Y="4.062" />
-      </Path>
-    </AssociationLine>
+    <Position X="4.75" Y="0.75" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAAAAAAACAAAAEAQABCAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAIAAAAAAAAAAAAQCAAAAAAQABAAAAAAAAAAA=</HashCode>
       <FileName>BlueJ_08\NewsFeed.cs</FileName>
     </TypeIdentifier>
-    <ShowAsAssociation>
-      <Property Name="PhotoPost" />
-      <Property Name="MessagePost" />
-    </ShowAsAssociation>
   </Class>
   <Class Name="CO453_ConsoleAppAnswer.BlueJ_08.PhotoPost">
-    <Position X="3.75" Y="3.75" Width="1.5" />
+    <Position X="9.75" Y="0.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAgAABIAAAIgAAAAAAAAQEAAgIAAAAAAAAAAogBAAg=</HashCode>
+      <HashCode>AAAgAAAIAAAAQAAAAQACAQAAAAIAAAAACAAgAgABAAA=</HashCode>
       <FileName>BlueJ_08\PhotoPost.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="CO453_ConsoleAppAnswer.BlueJ_08.MessagePost">
-    <Position X="7.25" Y="3.75" Width="1.5" />
+    <Position X="7.5" Y="1.5" Width="1.75" />
     <TypeIdentifier>
-      <HashCode>AAAgAAAIAAAAgAAIAAAAAQEAAgIAAAAAAAAAAgABACg=</HashCode>
+      <HashCode>AAAgAAAIAAAAAAAAAQACAQAAAAIAAAAAAAAgIgABAAA=</HashCode>
       <FileName>BlueJ_08\MessagePost.cs</FileName>
     </TypeIdentifier>
   </Class>

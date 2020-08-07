@@ -1,8 +1,4 @@
 ﻿using System;
-using System.Text;
-
-
-
 
 namespace CO453_ConsoleAppAnswer
 {

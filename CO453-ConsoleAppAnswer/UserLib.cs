@@ -27,15 +27,17 @@ namespace CO453_ConsoleAppAnswer
         {
             int choiceNo;
             int lastChoice = choices.Length;
-
             bool validChoice;
-            string errorMessage = $"\n INVALID CHOICE: must be 1 to {lastChoice} !";
+
+            string errorMessage = 
+                $"\n INVALID CHOICE: must be 1 to {lastChoice} !";
 
             do
             {
                 DisplayChoices(choices);
 
-                choiceNo = (int)InputNumber(" Please enter your choice > ");
+                choiceNo = (int)InputNumber(
+                    " Please enter your choice > ", 1, lastChoice);
 
                 if ((choiceNo < 1) || (choiceNo > lastChoice))
                 {
@@ -52,15 +54,16 @@ namespace CO453_ConsoleAppAnswer
         /// <summary>
         /// Display a list of choices as a numbered list
         /// </summary>
-        private static void DisplayChoices(string[] choices)
+        public static void DisplayChoices(string[] choices)
         {
             Console.WriteLine();
 
-            int count = 0;
+            int choiceNo = 0;
+
             foreach (string choice in choices)
             {
-                count++;
-                Console.WriteLine($" {count}. {choice}");
+                choiceNo++;
+                Console.WriteLine($" {choiceNo}. {choice}");
             }
 
             Console.WriteLine();
@@ -73,7 +76,7 @@ namespace CO453_ConsoleAppAnswer
         public static double InputNumber(string prompt)
         {
             double number = 0;
-            bool Isvalid;
+            bool isValid;
 
             do
             {
@@ -83,21 +86,22 @@ namespace CO453_ConsoleAppAnswer
                 try
                 {
                     number = Convert.ToDouble(value);
-                    Isvalid = true;
+                    isValid = true;
                 }
                 catch (Exception)
                 {
-                    Isvalid = false;
-                    Console.WriteLine(" INVALID NUMBER!");
+                    isValid = false;
+                    Console.WriteLine(" INVALID NUMBER!\n");
                 }
 
-            } while (!Isvalid);
+            } while (!isValid);
 
             return number;
         }
 
         /// <summary>
-        /// 
+        /// Repeated prompt the user to enter a number and only
+        /// return a value between min and max inclusive
         /// </summary>
         public static double InputNumber(string prompt, double min, double max)
         {

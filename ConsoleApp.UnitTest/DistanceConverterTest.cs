@@ -13,10 +13,10 @@ namespace ConsoleApp.UnitTest
 
             DistanceConverter15 converter = new DistanceConverter15();
 
-            converter.fromUnit = DistanceConverter15.MILES;
-            converter.toUnit = DistanceConverter15.FEET;
+            converter.FromUnit = DistanceUnit.Miles;
+            converter.ToUnit = DistanceUnit.Feet;
 
-            converter.fromDistance = 2.0;
+            converter.FromDistance = 2.0;
             double expectedDistance = 10560;
 
             // Act
@@ -25,7 +25,7 @@ namespace ConsoleApp.UnitTest
 
             // Assert
 
-            Assert.AreEqual(expectedDistance, converter.toDistance);
+            Assert.AreEqual(expectedDistance, converter.ToDistance);
         }
     }
 }

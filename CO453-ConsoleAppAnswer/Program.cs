@@ -12,31 +12,7 @@ namespace CO453_ConsoleAppAnswer
     /// </author>
     public static class Program
     {
-        public static Network01 Network { get; set; }
-
-        public static StudentGradesApp StudentGradesApp
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public static StudentGrades StudentGrades
-        {
-            get => default;
-            set
-            {
-            }
-        }
-
-        public static Distance0 Distance0
-        {
-            get => default;
-            set
-            {
-            }
-        }
+        public static NetworkUI Network { get; set; }
 
         public static void Main()
         {
@@ -65,7 +41,7 @@ namespace CO453_ConsoleAppAnswer
             }
             else if (choiceNo == 4)
             {
-                Network01 network = new Network01();
+                NetworkUI network = new NetworkUI();
                 network.Run();
             }
 

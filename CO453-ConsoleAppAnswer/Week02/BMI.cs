@@ -17,7 +17,7 @@ namespace CO453_ConsoleAppAnswer
     /// imperial or metric units.
     /// </summary>
     /// <Author>
-    /// Derek Peacock Version 1.0
+    /// Derek Peacock App02: Version 1.0
     /// </Author>
     public class BMI
     {
