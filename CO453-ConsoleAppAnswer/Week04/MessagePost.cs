@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Transactions;
 
 namespace CO453_ConsoleAppAnswer.Week04
 {
@@ -26,8 +25,15 @@ namespace CO453_ConsoleAppAnswer.Week04
 
         public override void Display()
         {
+            Console.WriteLine("\n    Message Post");
+            Console.WriteLine("    ------------");
             Console.WriteLine($"    Message: {Message}");
             base.Display();
+        }
+
+        public override string GetSummary()
+        {
+            return base.GetSummary() + $" Message: {Message}";
         }
 
     }

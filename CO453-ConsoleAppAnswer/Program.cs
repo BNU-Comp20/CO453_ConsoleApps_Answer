@@ -19,8 +19,8 @@ namespace CO453_ConsoleAppAnswer
             UserLib.OutputHeading(" C# Console Applications 2020");
 
             string [] choices = { 
-                "Distance Converter", "BMI Calculator",
-                "Student Grades", "Network", "Quit" };
+                "App01: Distance Converter", "App02: BMI Calculator",
+                "App03: Student Grades", "App04: Network", "Quit" };
 
             int choiceNo = UserLib.SelectChoice(choices);
 
@@ -42,20 +42,9 @@ namespace CO453_ConsoleAppAnswer
             else if (choiceNo == 4)
             {
                 NetworkUI network = new NetworkUI();
-                network.Run();
+                network.DisplayMenu();
             }
 
-            //converter.ConvertFeetToMiles();
-            //converter.ConvertMilesToMetres();
-
-            //LengthConverter converter2 = new LengthConverter();
-
-            //converter2.OutputFactors();
-            //converter2.Execute();
-
-            //converter.CalculateFeet();
-            //converter.DoSomething();
-            //converter.CalculateMiles();
         }
     }
 }

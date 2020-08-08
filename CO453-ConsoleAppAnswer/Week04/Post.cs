@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-
+using System.Text;
 
 namespace CO453_ConsoleAppAnswer.Week04
 {
@@ -75,6 +75,13 @@ namespace CO453_ConsoleAppAnswer.Week04
             Console.WriteLine(ToString());
         }
 
+
+        public virtual string GetSummary()
+        {
+            return $" {Timestamp}: {Username}";
+        }
+
+
         ///<summary>
         /// Create a string describing a time point in the past in terms 
         /// relative to current time, such as "30 seconds ago" or "7 minutes ago".
@@ -111,29 +118,37 @@ namespace CO453_ConsoleAppAnswer.Week04
         /// </summary>
         public override string ToString()
         {
-            string text = $"    Author: {Username} \n";
-
-            text += $"    Time Elpased: {FormatElapsedTime(Timestamp)} \n\n";
+            StringBuilder builder = new StringBuilder();
+            
+            builder.AppendLine($"    Author: {Username}");
+            builder.AppendLine($"    Time Elpased: {FormatElapsedTime(Timestamp)} \n");
 
             if (likes > 0)
             {
-                text += $"    Likes:  {likes}  people like this. \n";
+                builder.AppendLine($"    Likes:  {likes}  people like this.");
             }
             else
             {
-                text += "\n";
+                builder.AppendLine();
             }
 
             if (comments.Count == 0)
             {
-                text += "    No comments.\n";
+                builder.AppendLine("    No comments.");
             }
             else
             {
-                text += $"    {comments.Count}  comment(s). Click here to view.\n";
+                builder.AppendLine($"    {comments.Count}  comment(s).\n");
+                
+                foreach(string comment in comments)
+                {
+                    builder.AppendLine($"    {comment}");
+                }
+
+                builder.AppendLine();
             }
 
-            return text;
+            return builder.ToString();
         }
     }
 }

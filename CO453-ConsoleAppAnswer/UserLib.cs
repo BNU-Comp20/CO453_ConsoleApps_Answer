@@ -48,6 +48,8 @@ namespace CO453_ConsoleAppAnswer
 
             } while (!validChoice);
 
+            Console.WriteLine();
+
             return choiceNo;
         }
 

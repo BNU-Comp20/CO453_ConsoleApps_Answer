@@ -31,11 +31,17 @@ namespace CO453_ConsoleAppAnswer.Week04
 
         public override void Display()
         {
-            Console.WriteLine(" PhotoPost Display Method");
+            Console.WriteLine("\n    Photo Post");
+            Console.WriteLine("    -----------");
             Console.WriteLine($"    Filename: [{Filename}]");
             Console.WriteLine($"    Caption: {Caption}");
 
             base.Display();
+        }
+
+        public override string GetSummary()
+        {
+            return base.GetSummary() + $" Photo: {Caption}";
         }
 
     }

@@ -8,7 +8,7 @@
     /// distance measured in feet.
     /// </summary>
     /// <author>
-    /// Derek Peacock
+    /// Derek Peacock version 0.1
     /// </author>
     class DistanceConverter
     {
