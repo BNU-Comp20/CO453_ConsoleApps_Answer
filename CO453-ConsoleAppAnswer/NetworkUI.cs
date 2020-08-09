@@ -8,9 +8,38 @@ namespace CO453_ConsoleAppAnswer
     /// example whereby users can post messages and photos.
     /// Users can also add comments and like/unlike posts.
     /// </summary>
+    /// <author>
+    /// Derek Peacock Version 1.1
+    /// </author>
     public class NetworkUI
     {
         private readonly NewsFeed news = new NewsFeed();
+
+        public void DisplayMenu2()
+        {
+            bool quit = false;
+
+            UserLib.OutputHeading("      Derek's News Daily");
+
+            string[] choices = new string[]
+            { 
+              "Add Message", "Add Photo",  "Display All", "Quit" 
+            };
+
+            do
+            {
+                int choice = UserLib.SelectChoice(choices);
+
+                switch (choice)
+                {
+                    case 1: AddMessage(); break;
+                    case 2: AddPhoto(); break;
+                    case 3: Display(); break;
+                    case 4: quit = true; break;
+                }
+
+            } while (!quit);
+        }
 
         public void DisplayMenu()
         {
@@ -19,10 +48,10 @@ namespace CO453_ConsoleAppAnswer
             UserLib.OutputHeading("      Derek's News Daily");
 
             string[] choices = new string[]
-                { 
-                  "Add Message", "Add Photo",   "Add Comment", 
+                {
+                  "Add Message", "Add Photo",   "Add Comment",
                   "Display All", "Display by Author", "Display by Date",
-                  "Like/Unlike", "Remove Post", "Quit" 
+                  "Like/Unlike", "Remove Post", "Quit"
                 };
 
             do
@@ -48,6 +77,9 @@ namespace CO453_ConsoleAppAnswer
             } while (!quit);
         }
 
+        /// <summary>
+        /// Add a comment to a selected Post
+        /// </summary>
         private void AddComment()
         {
             Post post = SelectPost();
