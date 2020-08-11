@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CO453_ConsoleAppAnswer.Week04
+namespace CO453_ConsoleAppAnswer.App04
 {
     public class MessagePost : Post
     {

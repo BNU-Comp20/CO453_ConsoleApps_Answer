@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace CO453_ConsoleAppAnswer.Week04
+namespace CO453_ConsoleAppAnswer.App04
 {
     /**
     * The NewsFeed class stores news posts for the news feed in a

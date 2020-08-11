@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace CO453_ConsoleAppAnswer.Week04
+namespace CO453_ConsoleAppAnswer.App04
 {
     ///<summary>
     /// This class stores general information about a post 
