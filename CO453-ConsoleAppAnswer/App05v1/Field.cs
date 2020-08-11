@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Text;
 
 namespace CO453_ConsoleAppAnswer.App05v1
 {
@@ -20,7 +21,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
         public int Width { get; }
 
         // Storage for the animals.
-        private readonly Object[,] field;
+        private readonly Object[,] animals;
 
         /**
          * Represent a field of the given dimensions.
@@ -31,7 +32,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
         {
             Depth = depth;
             Width = width;
-            field = new Object[Depth, Width];
+            animals = new Object[Depth, Width];
         }
 
         /**
@@ -43,7 +44,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
             {
                 for (int col = 0; col < Width; col++)
                 {
-                    field[row, col] = null;
+                    animals[row, col] = null;
                 }
             }
         }
@@ -54,7 +55,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
          */
         public void Clear(Location location)
         {
-            field[location.Row, location.Column] = null;
+            animals[location.Row, location.Column] = null;
         }
 
         /**
@@ -79,7 +80,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
          */
         public void Place(Object animal, Location location)
         {
-            field[location.Row, location.Column] = animal;
+            animals[location.Row, location.Column] = animal;
         }
 
         /**
@@ -87,9 +88,9 @@ namespace CO453_ConsoleAppAnswer.App05v1
          * @param location Where in the field.
          * @return The animal at the given location, or null if there is none.
          */
-        public Object GetObjectAt(Location location)
+        public Object GetAnimalAt(Location location)
         {
-            return GetObjectAt(location.Row, location.Column);
+            return GetAnimalAt(location.Row, location.Column);
         }
 
         /**
@@ -98,9 +99,9 @@ namespace CO453_ConsoleAppAnswer.App05v1
          * @param col The desired column.
          * @return The animal at the given location, or null if there is none.
          */
-        public Object GetObjectAt(int row, int col)
+        public Object GetAnimalAt(int row, int col)
         {
-            return field[row, col];
+            return animals[row, col];
         }
 
         /**
@@ -129,7 +130,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
 
             foreach (Location next in adjacent)
             {
-                if (GetObjectAt(next) == null)
+                if (GetAnimalAt(next) == null)
                 {
                     free.Add(next);
                 }
@@ -203,6 +204,32 @@ namespace CO453_ConsoleAppAnswer.App05v1
         private void Shuffle(List<Location> locations)
         {
             // todo
+        }
+
+        public override string ToString()
+        {
+            StringBuilder builder = new StringBuilder();
+            builder.AppendLine($"Field Contents:");
+            builder.AppendLine();
+
+            for (int row = 0; row < animals.GetLength(0); row++)
+            {
+               for(int column = 0; column < animals.GetLength(1); column++)
+               {
+                    if(animals[row,column] == null)
+                    {
+                        builder.Append(".");
+                    }
+                    else 
+                    {
+                        builder.Append(animals[row, column].ToString());
+                    }
+               }
+                builder.AppendLine();
+            }
+
+            builder.AppendLine();
+            return builder.ToString();
         }
 
     }

@@ -1,4 +1,5 @@
-﻿using CO453_ConsoleAppAnswer.Week03;
+﻿using CO453_ConsoleAppAnswer.App05v1;
+using CO453_ConsoleAppAnswer.Week03;
 
 namespace CO453_ConsoleAppAnswer
 {
@@ -20,7 +21,8 @@ namespace CO453_ConsoleAppAnswer
 
             string [] choices = { 
                 "App01: Distance Converter", "App02: BMI Calculator",
-                "App03: Student Grades", "App04: Network", "Quit" };
+                "App03: Student Grades",     "App04: Network", 
+                "App05: Simulator",          "Quit" };
 
             int choiceNo = UserLib.SelectChoice(choices);
 
@@ -44,7 +46,12 @@ namespace CO453_ConsoleAppAnswer
                 NetworkUI network = new NetworkUI();
                 network.DisplayMenu();
             }
+            else if (choiceNo == 5)
+            {
+                SimulatorView view = new SimulatorView();
 
+                view.RunSimulator();
+            }
         }
     }
 }

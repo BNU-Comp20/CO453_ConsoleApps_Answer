@@ -169,7 +169,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
 
             foreach(Location where in adjacent)
             {
-                Object animal = field.GetObjectAt(where);
+                Object animal = field.GetAnimalAt(where);
                 
                 if (animal is Rabbit) 
                 {
@@ -242,6 +242,11 @@ namespace CO453_ConsoleAppAnswer.App05v1
                 location = null;
                 field = null;
             }
+        }
+
+        public override string ToString()
+        {
+            return "F";
         }
 
     }

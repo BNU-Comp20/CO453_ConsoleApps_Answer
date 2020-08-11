@@ -48,7 +48,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
                 Counter info = counters.GetValueOrDefault(key);
 
                 buffer.Append(info.Name);
-                buffer.Append(": ");
+                buffer.Append(" Nos: ");
                 buffer.Append(info.Count);
                 buffer.Append(' ');
             }
@@ -135,7 +135,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
             {
                 for (int col = 0; col < field.Width; col++)
                 {
-                    Object animal = field.GetObjectAt(row, col);
+                    Object animal = field.GetAnimalAt(row, col);
                     if (animal != null)
                     {
                         IncrementCount(animal.GetType().ToString());

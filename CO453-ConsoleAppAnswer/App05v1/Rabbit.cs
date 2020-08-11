@@ -186,5 +186,10 @@ namespace CO453_ConsoleAppAnswer.App05v1
             return age >= BREEDING_AGE;
         }
 
+        public override string ToString()
+        {
+            return "R";
+        }
+
     }
 }

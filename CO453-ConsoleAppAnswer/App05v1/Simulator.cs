@@ -15,9 +15,9 @@ namespace CO453_ConsoleAppAnswer.App05v1
     {
         // Constants representing configuration information for the simulation.
         // The default width for the grid.
-        private const int DEFAULT_WIDTH = 120;
+        private const int DEFAULT_WIDTH = 100;
         // The default depth of the grid.
-        private const int DEFAULT_DEPTH = 80;
+        private const int DEFAULT_DEPTH = 40;
         
         // The probability that a fox will be created in any given grid position.
         private const double FOX_CREATION_PROBABILITY = 0.02;
@@ -29,13 +29,11 @@ namespace CO453_ConsoleAppAnswer.App05v1
         private readonly List<Fox> foxes;
         
         // The current state of the field.
-        private readonly Field field;
-        
+        public Field Field { get; }
+
         // The current step of the simulation.
         private int step;
         
-        // A graphical view of the simulation.
-        //private SimulatorView view;
 
         /**
          * Construct a simulation field with default size.
@@ -63,7 +61,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
 
             rabbits = new List<Rabbit>();
             foxes = new List<Fox>();
-            field = new Field(depth, width);
+            Field = new Field(depth, width);
 
             // Create a view of the state of each location in the field.
             //view = new SimulatorView(depth, width);
@@ -72,6 +70,11 @@ namespace CO453_ConsoleAppAnswer.App05v1
 
             // Setup a valid starting point.
             Reset();
+        }
+
+        public int GetStep()
+        {
+            return step;
         }
 
         /**
@@ -90,7 +93,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
          */
         public void Simulate(int numSteps)
         {
-            for (int i = 1; step <= numSteps; i++)
+            for (int i = 1; i <= numSteps; i++)
             {
                 SimulateOneStep();
                 // delay(60);   // uncomment this to run more slowly
@@ -109,8 +112,9 @@ namespace CO453_ConsoleAppAnswer.App05v1
             List<Rabbit> newRabbits = new List<Rabbit>();
 
             // Let all rabbits act.
-            foreach (Rabbit rabbit in rabbits)
+            for(int r = 0; r < rabbits.Count; r++)
             {
+                Rabbit rabbit = rabbits[r];
                 rabbit.Run(newRabbits);
                 if (!rabbit.IsAlive())
                 {
@@ -122,8 +126,9 @@ namespace CO453_ConsoleAppAnswer.App05v1
             List<Fox> newFoxes = new List<Fox>();
 
             // Let all foxes act.
-            foreach (Fox fox in foxes)
+            for (int f = 0; f < foxes.Count; f++)
             {
+                Fox fox = foxes[f];
                 fox.Hunt(newFoxes);
                 if (!fox.IsAlive())
                 {
@@ -159,21 +164,21 @@ namespace CO453_ConsoleAppAnswer.App05v1
         private void Populate()
         {
             Random rand = Randomizer.GetRandom();
-            field.Clear();
-            for (int row = 0; row < field.Depth; row++)
+            Field.Clear();
+            for (int row = 0; row < Field.Depth; row++)
             {
-                for (int col = 0; col < field.Width; col++)
+                for (int col = 0; col < Field.Width; col++)
                 {
                     if (rand.NextDouble() <= FOX_CREATION_PROBABILITY)
                     {
                         Location location = new Location(row, col);
-                        Fox fox = new Fox(true, field, location);
+                        Fox fox = new Fox(true, Field, location);
                         foxes.Add(fox);
                     }
                     else if (rand.NextDouble() <= RABBIT_CREATION_PROBABILITY)
                     {
                         Location location = new Location(row, col);
-                        Rabbit rabbit = new Rabbit(true, field, location);
+                        Rabbit rabbit = new Rabbit(true, Field, location);
                         rabbits.Add(rabbit);
                     }
                     // else leave the location empty.
