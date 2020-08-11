@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CO453_ConsoleAppAnswer.Week03
+namespace CO453_ConsoleAppAnswer.App03
 {
     /// <summary>
     /// Grade A is First Class   : 70 - 100
