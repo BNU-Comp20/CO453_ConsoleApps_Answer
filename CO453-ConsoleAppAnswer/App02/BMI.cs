@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CO453_ConsoleAppAnswer
+namespace CO453_ConsoleAppAnswer.App02
 {
     /// <summary>
     /// Two systems of measuring weight and height
