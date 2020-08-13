@@ -11,12 +11,13 @@ namespace ConsoleApp.UnitTest
         {
             // Arrange
 
-            DistanceConverter15 converter = new DistanceConverter15();
+            DistanceConverter15 converter = new DistanceConverter15()
+            {
+                FromUnit = DistanceUnit.Miles,
+                ToUnit = DistanceUnit.Feet,
+                FromDistance = 2.0
+            };
 
-            converter.FromUnit = DistanceUnit.Miles;
-            converter.ToUnit = DistanceUnit.Feet;
-
-            converter.FromDistance = 2.0;
             double expectedDistance = 10560;
 
             // Act

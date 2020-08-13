@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 
 namespace CO453_ConsoleAppAnswer.App05v1
 {
@@ -28,7 +29,7 @@ namespace CO453_ConsoleAppAnswer.App05v1
         /**
          * Implement content equality.
          */
-        public bool Equals(Object obj)
+        public override bool Equals(Object obj)
         {
             if (obj.GetType() == typeof(Location)) 
             {
@@ -60,6 +61,5 @@ namespace CO453_ConsoleAppAnswer.App05v1
         {
             return (Row << 16) + Column;
         }
-
     }
 }
