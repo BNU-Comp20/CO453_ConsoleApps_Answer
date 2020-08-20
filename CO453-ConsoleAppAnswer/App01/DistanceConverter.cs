@@ -10,7 +10,7 @@
     /// <author>
     /// Derek Peacock version 0.1
     /// </author>
-    class DistanceConverter
+    public class DistanceConverter
     {
         public const int FEET_IN_MILES = 5280;
         public const double METRES_IN_MILES = 1609.34;

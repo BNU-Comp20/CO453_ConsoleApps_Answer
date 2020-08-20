@@ -3,7 +3,7 @@
 namespace CO453_ConsoleAppAnswer.App02
 {
     /// <summary>
-    /// Two systems of measuring weight and height
+    /// Two unit systems measuring weight and height
     /// </summary>
     public enum UnitSystem
     {
@@ -25,9 +25,9 @@ namespace CO453_ConsoleAppAnswer.App02
         public const double NormalRange = 24.9;
         public const double Overweight = 29.9;
 
-        public const double Obese1 = 34.9;
-        public const double Obese2 = 39.9;
-        public const double Obese3 = 40.0;
+        public const double ObeseLevel1 = 34.9;
+        public const double ObeseLevel2 = 39.9;
+        public const double ObeseLevel3 = 40.0;
 
         public const int InchesInFeet = 12;
         public const int PoundsInStones = 14;
@@ -72,6 +72,65 @@ namespace CO453_ConsoleAppAnswer.App02
         }
 
         /// <summary>
+        /// Prompt the user to select imperial or metric
+        /// units for entering their weight and height
+        /// </summary>
+        private UnitSystem SelectUnits()
+        {
+            string[] choices = new[]
+            {
+                "Metric Units",
+                "Imperial Units"
+            };
+
+            int choice = UserLib.SelectChoice(choices);
+
+            if (choice == 1)
+            {
+                return UnitSystem.Metric;
+            }
+            else return UnitSystem.Imperial;
+        }
+
+        /// <summary>
+        /// Input the users height in feet and inches and
+        /// their weight in stones and pounds
+        /// </summary>
+        private void InputImperialDetails()
+        {
+            Console.WriteLine(
+                " Enter your height in feet and inches ");
+            double feet = UserLib.InputNumber(
+                "\n Enter your height in feet > ");
+            inches = (int)UserLib.InputNumber(
+                " Enter your height in inches > ");
+
+            inches += (int)feet * InchesInFeet;
+
+            Console.WriteLine(
+                " Enter your weight in stones and pounds");
+            double stones = UserLib.InputNumber(
+                " Enter your weight in stones > ");
+            pounds = UserLib.InputNumber(
+                " Enter your weight in pounds > ");
+
+            pounds += stones * PoundsInStones;
+        }
+
+        /// <summary>
+        /// Input the users height in metres and
+        /// their weight in kilograms
+        /// </summary>
+        private void InputMetricDetails()
+        {
+            metres = UserLib.InputNumber(
+                " \n Enter your height in metres > ");
+
+            kilograms = UserLib.InputNumber(
+                " Enter your weight in kilograms > ");
+        }
+
+        /// <summary>
         /// Output the users BMI and their weight
         /// category from underweight to obese.
         /// </summary>
@@ -94,19 +153,19 @@ namespace CO453_ConsoleAppAnswer.App02
                     $"You are overweight! ");
 
             }
-            else if (index <= Obese1)
+            else if (index <= ObeseLevel1)
             {
                 Console.WriteLine($" Your BMI is {index}, " +
                     $"You are obese class I ");
 
             }
-            else if (index <= Obese2)
+            else if (index <= ObeseLevel2)
             {
                 Console.WriteLine($" Your BMI is {index}, " +
                     $"You are obese class II ");
 
             }
-            else if (index <= Obese3)
+            else if (index <= ObeseLevel3)
             {
                 Console.WriteLine($" Your BMI is {index}, " +
                     $"You are obese class III ");
@@ -133,61 +192,6 @@ namespace CO453_ConsoleAppAnswer.App02
             Console.WriteLine(
                 "\t Adults 27.5 or more are at high risk");
             Console.WriteLine();
-        }
-
-        /// <summary>
-        /// Input the users height in feet and inches and
-        /// their weight in stones and pounds
-        /// </summary>
-        private void InputImperialDetails()
-        {
-            Console.WriteLine(
-                " Enter your height in feet and inches ");
-            double feet = UserLib.InputNumber(
-                "\n Enter your height in feet > ");
-            inches = (int) UserLib.InputNumber(
-                " Enter your height in inches > ");
-
-            inches += (int) feet * InchesInFeet;
-
-            Console.WriteLine(
-                " Enter your weight in stones and pounds");
-            double stones = UserLib.InputNumber(
-                " Enter your weight in stones > ");
-            pounds = UserLib.InputNumber(
-                " Enter your weight in pounds > ");
-
-            pounds += stones * PoundsInStones;
-        }
-
-        /// <summary>
-        /// Input the users height in metres and
-        /// their weight in kilograms
-        /// </summary>
-        private void InputMetricDetails()
-        {
-            metres = UserLib.InputNumber(
-                " \n Enter your height in metres > ");
-
-            kilograms = UserLib.InputNumber(
-                " Enter your weight in kilograms > ");
-        }
-
-        private UnitSystem SelectUnits()
-        {
-            string[] choices = new[]
-            {
-                "Metric Units",
-                "Imperial Units"
-            };
-
-            int choice = UserLib.SelectChoice(choices);
-            
-            if (choice == 1)
-            {
-                return UnitSystem.Metric;
-            }
-            else return UnitSystem.Imperial;
         }
     }
 }

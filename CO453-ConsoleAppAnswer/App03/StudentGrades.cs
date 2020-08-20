@@ -68,6 +68,52 @@ namespace CO453_ConsoleAppAnswer.App03
             GradeProfile = new int[(int)Grade.A + 1];
         }
 
+        public void OutputMenu()
+        {
+            string[] choices = {
+                "Input Marks",
+                "Output Marks",
+                "Output Stats",
+                "Output Grade Profile",
+                "Quit" };
+
+            int choiceNo;
+
+            do
+            {
+                UserLib.OutputHeading("    Students Grades App");
+
+                choiceNo = UserLib.SelectChoice(choices);
+
+                switch (choiceNo)
+                {
+                    case 1: InputMarks(); break;
+                    case 2: OutputMarks(); break;
+                    case 3:
+                        CalculateStats();
+                        OutputStats(); break;
+                    case 4:
+                        CalculateGradeProfile();
+                        OutputGradeProfile(); break;
+
+                    default:
+                        break;
+                }
+
+            } while (choiceNo != 5);
+        }
+
+
+        /// <summary>
+        /// Input a mark between 0 - 100 for each 
+        /// student and store it in the Marks array
+        /// </summary>
+        public void InputMarks()
+        {
+            throw new NotImplementedException();
+        }
+
+
 
         /// <summary>
         /// Convert a student mark to a grade 
@@ -143,15 +189,6 @@ namespace CO453_ConsoleAppAnswer.App03
         }
 
         /// <summary>
-        /// Input a mark between 0 - 100 for each 
-        /// student and store it in the Marks array
-        /// </summary>
-        public void InputMarks()
-        {
-            throw new NotImplementedException();
-        }
-
-        /// <summary>
         /// List all the students and display their
         /// name and current mark
         /// </summary>
@@ -191,41 +228,6 @@ namespace CO453_ConsoleAppAnswer.App03
             }
 
             Console.WriteLine();
-        }
-
-        public void OutputMenu()
-        {
-            string[] choices = {
-                "Input Marks",
-                "Output Marks",
-                "Output Stats",
-                "Output Grade Profile",
-                "Quit" };
-
-            int choiceNo;
-
-            do
-            {
-                UserLib.OutputHeading("    Students Grades App");
-
-                choiceNo = UserLib.SelectChoice(choices);
-
-                switch (choiceNo)
-                {
-                    case 1: InputMarks(); break;
-                    case 2: OutputMarks(); break;
-                    case 3:
-                        CalculateStats();
-                        OutputStats(); break;
-                    case 4:
-                        CalculateGradeProfile();
-                        OutputGradeProfile(); break;
-
-                    default:
-                        break;
-                }
-
-            } while (choiceNo != 5);
         }
 
     }

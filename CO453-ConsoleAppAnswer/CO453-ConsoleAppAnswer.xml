@@ -1,0 +1,1354 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CO453-ConsoleAppAnswer</name>
+    </assembly>
+    <members>
+        <member name="T:CO453_ConsoleAppAnswer.Distance">
+            <summary>
+            This class offers methods for prompting the use
+            to enter the number of miles, and then converting
+            that into the equivalent number feet
+            </summary>
+            <author>
+            Derek Peacock
+            </author>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.Distance0">
+            <summary>
+            This class offers methods for prompting the use
+            to enter the number of miles, and then converting
+            that into the equivalent number feet
+            </summary>
+            <author>
+            Derek Peacock
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Distance0.ConvertMilesToFeet">
+            <summary>
+            convert the distance measured in miles to feet
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Distance0.OutputFeet">
+            <summary>
+            Output the given distance measured in feet
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Distance0.InputMiles">
+            <summary>
+            Input a distance measured in miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Distance0.OutputHeading">
+            <summary>
+            Output a Heading for the distance converter
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.DistanceConverter">
+            <summary>
+            This class offers a method for converting a given
+            distance measured in miles to the equivalent 
+            distance measured in feet.
+            </summary>
+            <author>
+            Derek Peacock version 0.1
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter.ConvertMilesToFeet">
+            <summary>
+            Calculate how many feet there are in the given miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter.CalculateMetres">
+            <summary>
+            Calculate how many metres there are in the given miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter.CalculateMiles">
+            <summary>
+            Calculate how many Miles there are in the given Kilometres
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter.InputKilometres">
+            <summary>
+            Prompt the user to input the number of kilometres
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter.InputMiles">
+            <summary>
+            Prompt the user to input the number of miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter.OutputFeet">
+            <summary>
+            Output how many feet there are in the given miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter.OutputMetres">
+            <summary>
+            Output the number of metres in the given distance in miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter.OutputMiles">
+            <summary>
+            Output the number of miles in the given distance in Kilometres
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter.OutputHeading">
+            <summary>
+            Output a Heading for the distance converter
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.DistanceConverter13">
+            <summary>
+            This class offers three methods for converting
+            between distances.  It can prompt the user to
+            
+            1.  To convert from Miles to Feet
+            2.  To Convert from Feet to Miles
+            3.  To Convert from Miles to Metres
+            </summary>
+            <author>
+            Derek Peacock version 1.3
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter13.ConvertMilesToFeet">
+            <summary>
+            Calculate how many feet there are in the given miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter13.ConvertMilesToMetres">
+            <summary>
+            Calculate how many metres there are in the given miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter13.ConvertFeetToMiles">
+            <summary>
+            Calculate how many Miles there are in the given Feet
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter13.InputMiles">
+            <summary>
+            Prompt the user to input the number of miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter13.InputFeet">
+            <summary>
+            Prompt the user to input the number of feet
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter13.OutputFeet">
+            <summary>
+            Output how many feet there are in the given miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter13.OutputMiles">
+            <summary>
+            Output how many miles there are in the given feet
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter13.OutputMetres">
+            <summary>
+            Output how many metres there are in the given miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter13.OutputHeading">
+            <summary>
+            Output a Heading for the distance converter
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.DistanceUnits">
+            <summary>
+            Choice of units used to measure distance
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.DistanceConverter14">
+            <summary>
+            This class offers the user a way of converting
+            between distances measured in Miles, Metre or Feet
+            The user can select any combination of from and
+            to distance units.
+            </summary>
+            <author>
+            Derek Peacock version 1.4
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter14.ConvertDistance">
+            <summary>
+            Output the heading and then prompt the user to select the 
+            from and to distance units.  The entered distance is then 
+            converted from one to the other distance units.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter14.PerformConversion">
+            <summary>
+            Convert the fromDistance to the toDistance based
+            on which fromUnits and toUnits have been selected
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter14.InputDistance(System.String)">
+            <summary>
+            Display the prompt and ask the user to input a 
+            distance as a double number
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter14.OutputDistance">
+            <summary>
+            Output the distance and units converted from and the distance
+            and units converted to
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter14.OutputHeading">
+            <summary>
+            Output a Heading for the distance converter
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter14.SelectUnit(System.String)">
+            <summary>
+            Display a menu of distance units and then prompt the
+            user to select one and return it.
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.DistanceConverter15">
+            <summary>
+            This class offers the user a way of converting
+            between distances measured in Miles, Metre or Feet
+            The user can select any combination of from and
+            to distance units.
+            </summary>
+            <author>
+            Derek Peacock App01: Version 1.5
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter15.ConvertDistance">
+            <summary>
+            Output the heading and then prompt the user to select the 
+            from and to distance units.  The entered distance is then 
+            converted from one to the other distance units.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter15.PerformConversion">
+            <summary>
+            Convert the fromDistance to the toDistance based
+            on which fromUnits and toUnits have been selected
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter15.InputDistance(System.String)">
+            <summary>
+            Display the prompt and ask the user to input a 
+            distance as a double number
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter15.OutputDistance">
+            <summary>
+            Output the distance and units converted from and the distance
+            and units converted to
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter15.OutputHeading">
+            <summary>
+            Output a Heading for the distance converter
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter15.SelectUnit(System.String)">
+            <summary>
+            Display a menu of distance units and then prompt the
+            user to select one and return it.
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.Week01.DistanceConverter16">
+            <summary>
+            This class offers the user a way of converting
+            between distances measured in Miles, Metre or Feet
+            The user can select any combination of from and
+            to distance units.  Uses UserLib
+            </summary>
+            <author>
+            Derek Peacock App01: Version 1.6
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Week01.DistanceConverter16.ConvertDistance">
+            <summary>
+            Output the heading and then prompt the user to select the 
+            from and to distance units.  The entered distance is then 
+            converted from one to the other distance units.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Week01.DistanceConverter16.PerformConversion">
+            <summary>
+            Convert the fromDistance to the toDistance based
+            on which fromUnits and toUnits have been selected
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Week01.DistanceConverter16.InputDistance(System.String)">
+            <summary>
+            Display the prompt and ask the user to input a 
+            distance as a double number
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Week01.DistanceConverter16.OutputDistance">
+            <summary>
+            Output the distance and units converted from and the distance
+            and units converted to
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Week01.DistanceConverter16.OutputHeading">
+            <summary>
+            Output a Heading for the distance converter
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Week01.DistanceConverter16.SelectUnit(System.String)">
+            <summary>
+            Display a menu of distance units and then prompt the
+            user to select one and return it.
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.DistanceUnit">
+            <summary>
+            Units used to measure length or distance
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.DistanceConverter3">
+            <summary>
+            This class offers methods for prompting the user
+            to select a distance unit to convert from, and a
+            distance unit to convert to, and then calculates
+            and outputs the number toUnits for the given 
+            fromUnits.
+            </summary>
+            <author>
+            Derek Peacock
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter3.Execute">
+            <summary>
+            Calculate how many toUnits there are in the given fromUnits
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter3.CalculateToValue">
+            <summary>
+            Calculate the final converted distance value depending
+            on which from and to units have been chosen.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter3.InputNumber(System.String)">
+            <summary>
+            Prompt the user to input a double number
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter3.OutputResult">
+            <summary>
+            Output the number of metres in the given distance in miles
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter3.OutputHeading">
+            <summary>
+            Output a Heading for the distance converter
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.DistanceConverter3.SelectUnit(System.String)">
+            <summary>
+            Display a menu of distance units and then prompt the
+            user to select one and return it.
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.LengthConverter">
+            <summary>
+            This class offers methods for prompting the user
+            select the from length unit and the to length unit.
+            The user then inputs the number of from units, and then 
+            calculates and outputs the equivalent number of to units
+            </summary>
+            <author>
+            Derek Peacock
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.LengthConverter.InputNumber(System.String)">
+            <summary>
+            Prompt the user to enter a double number and return it
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.LengthConverter.OutputFactors">
+            <summary>
+            Display all the conversion factors between the
+            different length units
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.LengthConverter.OutputHeading">
+            <summary>
+            Output a Heading for the length converter
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.LengthConverter.OutputResult">
+            <summary>
+            Output the length converted from one unit to another
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.LengthConverter.Execute">
+            <summary>
+            Prompt the user to select the unit they wish to conver from
+            and the unit they wish to conver to follwed by the length.
+            The resulting length is output.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.LengthConverter.SelectUnitNo">
+            <summary>
+            Select a unit number from the list of available units
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App02.UnitSystem">
+            <summary>
+            Two systems of measuring weight and height
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App02.BMI">
+            <summary>
+            This class contains methods for calculating 
+            the user's BMI (Body Mass Index) using 
+            imperial or metric units.
+            </summary>
+            <Author>
+            Derek Peacock App02: Version 1.0
+            </Author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App02.BMI.CalculateIndex">
+            <summary>
+             Prompt the user to select Imperial or Metric
+             units.  Input the user's height and weight and
+             then calculate their BMI value.  Output which
+             weight category they fall into.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App02.BMI.OutputHealthMessage">
+            <summary>
+            Output the users BMI and their weight
+            category from underweight to obese.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App02.BMI.OutputBameMessage">
+            <summary>
+            Output a message for BAME users who are
+            at higher risk
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App02.BMI.InputImperialDetails">
+            <summary>
+            Input the users height in feet and inches and
+            their weight in stones and pounds
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App02.BMI.InputMetricDetails">
+            <summary>
+            Input the users height in metres and
+            their weight in kilograms
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App03.Grade">
+            <summary>
+            Grade A is First Class   : 70 - 100
+            Grade B is Upper Second  : 60 - 69
+            Grade C is Lower Second  : 50 - 59
+            Grade D is Third Class   : 40 - 49
+            Grade E is Pass          : 38 - 39
+            Grade F is Fail          :  0 - 37
+            Grade X is NOT VALID
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App03.StudentGrades">
+            <summary>
+            This class has methods to input a single mark
+            for a given array of students.  The marks can be dislplayed,
+            converted to grades, and basic statistics can be calulated
+            and display as well as a profile showing the percentage
+            of students getting each of the grades.
+            
+            </summary>
+            <Author>
+            Derek Peacock App03: Version 1.0
+            </Author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App03.StudentGrades.#ctor">
+            <summary>
+            Class Constructor called when an object 
+            is created and sets up an array of students.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App03.StudentGrades.InputMarks">
+            <summary>
+            Input a mark between 0 - 100 for each 
+            student and store it in the Marks array
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App03.StudentGrades.ConvertToGrade(System.Int32)">
+            <summary>
+            Convert a student mark to a grade 
+            from F (Fail) to A (First Class)
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App03.StudentGrades.CalculateStats">
+            <summary>
+            Calculate and display the minimum, maximum 
+            and mean mark for all the students
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App03.StudentGrades.CalculateGradeProfile">
+            <summary>
+            Calculate and display the proportion of 
+            students achieving each of the grades
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App03.StudentGrades.OutputMarks">
+            <summary>
+            List all the students and display their
+            name and current mark
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App03.StudentGrades.OutputStats">
+            <summary>
+            Output the Minimum, Maximum and Mean Mark
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App03.StudentGrades.OutputGrades">
+            <summary>
+            List all the students and display their
+            name, mark and grade
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.MessagePost.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for objects of class MessagePost.
+            </summary>
+            <param name="author">
+            The username of the author of this post.
+            </param>
+            <param name="text">
+            The text of this post.
+            </param>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App04.NewsFeed">
+             The NewsFeed class stores news posts for the news feed in a
+             social-network application (like FaceBook or Google+).
+            
+             Display of the posts is currently simulated by printing the
+             details to the terminal. (Later, this should display in a browser.)
+            
+             This version does not save the data to disk, and it does not
+             provide any search or ordering functions.
+            
+             @author Michael Kölling and David J. Barnes
+             @version 0.2
+             
+             Extended by Derek Peacock version 0.3
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.NewsFeed.#ctor">
+            <summary>
+            Constructor creates a list of 3 posts to make testing 
+            easier.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.NewsFeed.AddPost(CO453_ConsoleAppAnswer.App04.Post)">
+            <summary>
+             Add a post to the news feed.
+             
+             @param post  The post to be added.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.NewsFeed.DisplayAll">
+            <summary>
+             Show the news feed. Currently: print the news feed details to the
+             terminal. (To do: replace this later with display in web browser.)
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.NewsFeed.DisplayByDate(System.DateTime,System.DateTime)">
+            <summary>
+            Display all the posts between the start and end
+            dates includively
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.NewsFeed.DisplayByAuthor(System.String)">
+            <summary>
+            Display all the posts by the given author
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.NewsFeed.DisplaySummary">
+            <summary>
+            Display a one line summary of each post
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.NewsFeed.RemovePost(CO453_ConsoleAppAnswer.App04.Post)">
+            <summary>
+            Remove the supplied post from the list of posts
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.NewsFeed.SelectPost">
+            <summary>
+            List a one line summary of all the posts and
+            allow the user to select one by position in
+            the list. First position = 1
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.PhotoPost.#ctor(System.String,System.String,System.String)">
+            <summary>
+             Constructor for objects of class PhotoPost.
+            </summary>
+             <param name="author">
+             The username of the author of this post.
+             </param>
+             <param name="caption">
+             A caption for the image.
+             </param>
+             <param name="filename">
+             The filename of the image in this post.
+             </param>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App04.Post">
+            <summary>
+             This class stores general information about a post 
+             in a social network. Posts can be added, liked, unliked
+             and displayed
+            </summary>
+             <author>
+             Michael Kölling and David J. Barnes
+             @version 0.2
+             </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.Post.Like">
+            <summary>
+             Record one more 'Like' indication from a user.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.Post.Unlike">
+            <summary>
+             Record that a user has withdrawn his/her 'Like' vote.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.Post.AddComment(System.String)">
+            <summary>
+             Add a comment to this post.
+             </summary>
+             <param name="text">
+             The new comment to add.
+             </param>        
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.Post.Display">
+            <summary>
+             Display the details of this post.
+             
+             (Currently: Print to the text terminal. This is simulating display 
+             in a web browser for now.)
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.Post.FormatElapsedTime(System.DateTime)">
+            <summary>
+             Create a string describing a time point in the past in terms 
+             relative to current time, such as "30 seconds ago" or "7 minutes ago".
+             Currently, only seconds and minutes are used for the string.
+             </summary>
+             <param name="time">
+              The time value to convert (in system milliseconds)
+             </param> 
+             <returns>
+             A relative time string for the given time
+             </returns>      
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App04.Post.ToString">
+            <summary>
+            Return as text the author's name, the time elapsed,
+            the number of likes and how many comments the post has
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05v1.Counter">
+            Provide a counter for a participant in the simulation.
+            This includes an identifying string and a count of how
+            many participants of this type currently exist within 
+            the simulation.
+            
+            @author David J. Barnes and Michael Kölling
+            @version 2016.02.29
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Counter.#ctor(System.String)">
+            Provide a name for one of the simulation types.
+            @param name  A name, e.g. "Fox".
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Counter.Increment">
+            Increment the current count by one.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Counter.Reset">
+            Reset the current count to zero.
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05v1.Field">
+            Represent a rectangular grid of field positions.
+            Each position is able to store a single animal.
+            
+            @author David J. Barnes and Michael Kölling
+            @version 2016.02.29
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.#ctor(System.Int32,System.Int32)">
+            Represent a field of the given dimensions.
+            @param depth The depth of the field.
+            @param width The width of the field.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.Clear">
+            Empty the field.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.Clear(CO453_ConsoleAppAnswer.App05v1.Location)">
+            Clear the given location.
+            @param location The location to clear.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.Place(System.Object,System.Int32,System.Int32)">
+            Place an animal at the given location.
+            If there is already an animal at the location it will
+            be lost.
+            @param animal The animal to be placed.
+            @param row Row coordinate of the location.
+            @param col Column coordinate of the location.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.Place(System.Object,CO453_ConsoleAppAnswer.App05v1.Location)">
+            Place an animal at the given location.
+            If there is already an animal at the location it will
+            be lost.
+            @param animal The animal to be placed.
+            @param location Where to place the animal.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.GetAnimalAt(CO453_ConsoleAppAnswer.App05v1.Location)">
+            Return the animal at the given location, if any.
+            @param location Where in the field.
+            @return The animal at the given location, or null if there is none.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.GetAnimalAt(System.Int32,System.Int32)">
+            Return the animal at the given location, if any.
+            @param row The desired row.
+            @param col The desired column.
+            @return The animal at the given location, or null if there is none.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.RandomAdjacentLocation(CO453_ConsoleAppAnswer.App05v1.Location)">
+            Generate a random location that is adjacent to the
+            given location, or is the same location.
+            The returned location will be within the valid bounds
+            of the field.
+            @param location The location from which to generate an adjacency.
+            @return A valid location within the grid area.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.GetFreeAdjacentLocations(CO453_ConsoleAppAnswer.App05v1.Location)">
+            Get a shuffled list of the free adjacent locations.
+            @param location Get locations adjacent to this.
+            @return A list of free adjacent locations.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.FreeAdjacentLocation(CO453_ConsoleAppAnswer.App05v1.Location)">
+            Try to find a free location that is adjacent to the
+            given location. If there is none, return null.
+            The returned location will be within the valid bounds
+            of the field.
+            @param location The location from which to generate an adjacency.
+            @return A valid location within the grid area.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Field.AdjacentLocations(CO453_ConsoleAppAnswer.App05v1.Location)">
+            Return a shuffled list of locations adjacent to the given one.
+            The list will not include the location itself.
+            All locations will lie within the grid.
+            @param location The location from which to generate adjacencies.
+            @return A list of locations adjacent to that given.
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05v1.FieldStats">
+            This class collects and provides some statistical data on the state 
+            of a field. It is flexible: it will create and maintain a counter 
+            for any class of object that is found within the field.
+            
+            @author David J. Barnes and Michael Kölling
+            @version 2016.02.29
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.FieldStats.#ctor">
+            Construct a FieldStats object.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.FieldStats.GetPopulationDetails(CO453_ConsoleAppAnswer.App05v1.Field)">
+            Get details of what is in the field.
+            @return A string describing what is in the field.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.FieldStats.Reset">
+            Invalidate the current set of statistics; reset all 
+            counts to zero.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.FieldStats.IncrementCount(System.String)">
+            Increment the count for one class of animal.
+            @param animalClass The class of animal to increment.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.FieldStats.CountFinished">
+            Indicate that an animal count has been completed.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.FieldStats.IsViable(CO453_ConsoleAppAnswer.App05v1.Field)">
+            Determine whether the simulation is still viable.
+            I.e., should it continue to run.
+            @return true If there is more than one species alive.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.FieldStats.GenerateCounts(CO453_ConsoleAppAnswer.App05v1.Field)">
+            Generate counts of the number of foxes and rabbits.
+            These are not kept up to date as foxes and rabbits
+            are placed in the field, but only when a request
+            is made for the information.
+            @param field The field to generate the stats for.
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05v1.Fox">
+            A simple model of a fox.
+            Foxes age, move, eat rabbits, and die.
+            
+            @author David J. Barnes and Michael Kölling
+            @version 2016.02.29
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.#ctor(System.Boolean,CO453_ConsoleAppAnswer.App05v1.Field,CO453_ConsoleAppAnswer.App05v1.Location)">
+            Create a fox. A fox can be created as a new born (age zero
+            and not hungry) or with a random age and food level.
+            
+            @param randomAge If true, the fox will have random age and hunger level.
+            @param field The field currently occupied.
+            @param location The location within the field.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.Hunt(System.Collections.Generic.List{CO453_ConsoleAppAnswer.App05v1.Fox})">
+            This is what the fox does most of the time: it hunts for
+            rabbits. In the process, it might breed, die of hunger,
+            or die of old age.
+            @param field The field currently occupied.
+            @param newFoxes A list to return newly born foxes.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.IsAlive">
+            Check whether the fox is alive or not.
+            @return True if the fox is still alive.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.GetLocation">
+            Return the fox's location.
+            @return The fox's location.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.SetLocation(CO453_ConsoleAppAnswer.App05v1.Location)">
+            Place the fox at the new location in the given field.
+            @param newLocation The fox's new location.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.IncrementAge">
+            Increase the age. This could result in the fox's death.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.IncrementHunger">
+            Make this fox more hungry. This could result in the fox's death.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.FindFood">
+            Look for rabbits adjacent to the current location.
+            Only the first live rabbit is eaten.
+            @return Where food was found, or null if it wasn't.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.GiveBirth(System.Collections.Generic.List{CO453_ConsoleAppAnswer.App05v1.Fox})">
+            Check whether or not this fox is to give birth at this step.
+            New births will be made into free adjacent locations.
+            @param newFoxes A list to return newly born foxes.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.Breed">
+            Generate a number representing the number of births,
+            if it can breed.
+            @return The number of births (may be zero).
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.CanBreed">
+            A fox can breed if it has reached the breeding age.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Fox.SetDead">
+            Indicate that the fox is no longer alive.
+            It is removed from the field.
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05v1.Location">
+            Represent a location in a rectangular grid.
+            
+            @author David J. Barnes and Michael Kölling
+            @version 2016.02.29
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Location.#ctor(System.Int32,System.Int32)">
+            Represent a row and column.
+            @param row The row.
+            @param col The column.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Location.Equals(System.Object)">
+            Implement content equality.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Location.ToString">
+            Return a string of the form row,column
+            @return A string representation of the location.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Location.HashCode">
+            Use the top 16 bits for the row value and the bottom for
+            the column. Except for very big grids, this should give a
+            unique hash code for each (row, col) pair.
+            @return A hashcode for the location.
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05v1.Rabbit">
+            A simple model of a rabbit.
+            Rabbits age, move, breed, and die.
+            
+            @author David J. Barnes and Michael Kölling
+            @version 2016.02.29
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Rabbit.#ctor(System.Boolean,CO453_ConsoleAppAnswer.App05v1.Field,CO453_ConsoleAppAnswer.App05v1.Location)">
+            Create a new rabbit. A rabbit may be created with age
+            zero (a new born) or with a random age.
+            
+            @param randomAge If true, the rabbit will have a random age.
+            @param field The field currently occupied.
+            @param location The location within the field.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Rabbit.Run(System.Collections.Generic.List{CO453_ConsoleAppAnswer.App05v1.Rabbit})">
+            This is what the rabbit does most of the time - it runs 
+            around. Sometimes it will breed or die of old age.
+            @param newRabbits A list to return newly born rabbits.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Rabbit.IsAlive">
+            Check whether the rabbit is alive or not.
+            @return true if the rabbit is still alive.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Rabbit.SetDead">
+            Indicate that the rabbit is no longer alive.
+            It is removed from the field.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Rabbit.GetLocation">
+            Return the rabbit's location.
+            @return The rabbit's location.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Rabbit.SetLocation(CO453_ConsoleAppAnswer.App05v1.Location)">
+            Place the rabbit at the new location in the given field.
+            @param newLocation The rabbit's new location.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Rabbit.IncrementAge">
+            Increase the age.
+            This could result in the rabbit's death.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Rabbit.GiveBirth(System.Collections.Generic.List{CO453_ConsoleAppAnswer.App05v1.Rabbit})">
+            Check whether or not this rabbit is to give birth at this step.
+            New births will be made into free adjacent locations.
+            @param newRabbits A list to return newly born rabbits.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Rabbit.Breed">
+            Generate a number representing the number of births,
+            if it can breed.
+            @return The number of births (may be zero).
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Rabbit.CanBreed">
+            A rabbit can breed if it has reached the breeding age.
+            @return true if the rabbit can breed, false otherwise.
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05v1.Randomizer">
+            Provide control over the randomization of the simulation. By using the shared, fixed-seed 
+            randomizer, repeated runs will perform exactly the same (which helps with testing). Set 
+            'useShared' to false to get different random behaviour every time.
+            
+            @author David J. Barnes and Michael Kölling
+            @version 2016.02.29
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Randomizer.GetRandom">
+            Provide a random generator.
+            @return A random object.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Randomizer.Reset">
+            Reset the randomization.
+            This will have no effect if randomization is not through a shared Random generator.
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05v1.Simulator">
+            A simple predator-prey simulator, based on a rectangular field containing 
+            rabbits and foxes.
+            
+            @author David J. Barnes and Michael Kölling
+            @version 2016.02.29
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Simulator.#ctor">
+            Construct a simulation field with default size.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Simulator.#ctor(System.Int32,System.Int32)">
+            Create a simulation field with the given size.
+            @param depth Depth of the field. Must be greater than zero.
+            @param width Width of the field. Must be greater than zero.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Simulator.RunLongSimulation">
+            Run the simulation from its current state for a reasonably long 
+            period (4000 steps).
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Simulator.Simulate(System.Int32)">
+            Run the simulation for the given number of steps.
+            Stop before the given number of steps if it ceases to be viable.
+            @param numSteps The number of steps to run for.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Simulator.SimulateOneStep">
+            Run the simulation from its current state for a single step. Iterate
+            over the whole field updating the state of each fox and rabbit.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Simulator.Reset">
+            Reset the simulation to a starting position.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Simulator.Populate">
+            Randomly populate the field with foxes and rabbits.
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05v1.Simulator.Delay(System.Int32)">
+            Pause for a given time.
+            @param millisec  The time to pause for, in milliseconds
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05v1.SimulatorView">
+            A graphical view of the simulation grid.
+            The view displays a colored rectangle for each location 
+            representing its contents. It uses a default background color.
+            Colors for each type of species can be defined using the
+            setColor method.
+            
+            @author David J. Barnes and Michael Kölling
+            @version 2016.02.29
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05.GameChoice">
+            <summary>
+            The three available choices during the game
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05.GamePlayer">
+            <summary>
+            The two players of the game
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05.Game">
+            <summary>
+            This class models the Rock-Paper-Scissors 
+            game and contains all the information on
+            the state of the game and methods to implement
+            the basic logic of the game.  It requires
+            another class to provide the user interface
+            and control the progress of the game.
+            </summary>
+            <author>
+            Derek Peacock version 0.1
+            </author>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05.GameImages">
+            <summary>
+            This class has a set of method that will draw out
+            some useful game images using textual characters
+            </summary>
+            <author>
+            Unkown ??
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05.GameImages.DrawScissors(System.Int32,System.Int32)">
+            <summary>
+            *******************************************************
+            
+            *******************************************************
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05.GameImages.DrawStone(System.Int32,System.Int32)">
+            <summary>
+            *******************************************************
+            
+            *******************************************************
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05.GameImages.DrawPaper(System.Int32,System.Int32)">
+            <summary>
+            *******************************************************
+            
+            *******************************************************
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05.GameImages.DrawSmile">
+            <summary>
+            *******************************************************
+            This will draw a smile
+            *******************************************************
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05.GameImages.DrawThumbsUp">
+            <summary>
+            *******************************************************
+            This will draw an image of ThumbsUp on the console
+            *******************************************************
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05.GameImages.DrawThumbsDown">
+            <summary>
+            *******************************************************
+            This will draw an image of ThumbsDown on the console
+            *******************************************************
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.App05.GameView">
+            <summary>
+            This class will create a user interface for the
+            Rock-Paper-Scissors game using the windows
+            Console
+            </summary>
+            <author>
+            Derek Peacock version 0.1
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05.GameView.PlayGame">
+            <summary>
+            This method will control the progress of the
+            game from start to end.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05.GameView.StartGame">
+            <summary>
+            Reset a game so that the scores reset to zero
+            for both players and the number of rounds is set.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05.GameView.GetPlayerChoice">
+            <summary>
+            Repeatedly ask the player to make a choice
+            and then ask the computer to make a choice.
+            The choices are then compared and scored
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.App05.GameView.EndGame">
+            <summary>
+            One player or more players have reached the chosen 
+            maximum score and the winner can be decided.
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.BlueJ_08.MessagePost">
+            <summary>
+             This class stores information about a post in a social network. 
+             The main part of the post consists of a (possibly multi-line)
+             text message. Other data, such as author and time, are also stored.
+             </summary>
+             <author>
+             Michael Kölling and David J. Barnes
+             version 0.1
+             </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.MessagePost.#ctor(System.String,System.String)">
+            <summary>
+            Constructor for objects of class MessagePost.
+            </summary>
+            <param name="author">
+            The username of the author of this post.
+            </param>
+            <param name="text">
+            The text of this post.
+            </param>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.MessagePost.Like">
+            <summary>
+             Record one more 'Like' indication from a user.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.MessagePost.Unlike">
+            <summary>
+             Record that a user has withdrawn his/her 'Like' vote.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.MessagePost.AddComment(System.String)">
+            <summary>
+             Add a comment to this post.
+             </summary>
+             <param name="text">
+             The new comment to add.
+             </param>        
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.MessagePost.Display">
+            <summary>
+             Display the details of this post.
+             
+             (Currently: Print to the text terminal. This is simulating display 
+             in a web browser for now.)
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.MessagePost.FormatElapsedTime(System.DateTime)">
+            <summary>
+             Create a string describing a time point in the past in terms 
+             relative to current time, such as "30 seconds ago" or "7 minutes ago".
+             Currently, only seconds and minutes are used for the string.
+             </summary>
+             <param name="time">
+              The time value to convert (in system milliseconds)
+             </param> 
+             <returns>
+             A relative time string for the given time
+             </returns>      
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.BlueJ_08.NewsFeed">
+            <summary>
+             The NewsFeed class stores news posts for the news feed in a social network 
+             application.
+             
+             Display of the posts is currently simulated by printing the details to the
+             terminal. (Later, this should display in a browser.)
+             
+             This version does not save the data to disk, and it does not provide any
+             search or ordering functions.
+            </summary>
+            <author>
+              Michael Kölling and David J. Barnes
+              version 0.1
+            </author> 
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.NewsFeed.#ctor">
+            <summary>
+             Construct an empty news feed.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.NewsFeed.AddMessagePost(CO453_ConsoleAppAnswer.BlueJ_08.MessagePost)">
+            <summary>
+             Add a text post to the news feed.
+             
+             @param text  The text post to be added.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.NewsFeed.AddPhotoPost(CO453_ConsoleAppAnswer.BlueJ_08.PhotoPost)">
+            <summary>
+             Add a photo post to the news feed.
+             
+             @param photo  The photo post to be added.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.NewsFeed.Display">
+            <summary>
+             Show the news feed. Currently: print the news feed details to the
+             terminal. (To do: replace this later with display in web browser.)
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.BlueJ_08.PhotoPost">
+            <summary>
+             This class stores information about a post in a social network. 
+             The main part of the post consists of a photo and a caption. 
+             Other data, such as author and time, are also stored.
+            </summary>
+             <author>
+             Michael Kölling and David J. Barnes
+             @version 0.1
+             </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.PhotoPost.#ctor(System.String,System.String,System.String)">
+            <summary>
+             Constructor for objects of class PhotoPost.
+            </summary>
+             <param name="author">
+             The username of the author of this post.
+             </param>
+             <param name="caption">
+             A caption for the image.
+             </param>
+             <param name="filename">
+             The filename of the image in this post.
+             </param>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.PhotoPost.Like">
+            <summary>
+             Record one more 'Like' indication from a user.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.PhotoPost.Unlike">
+            <summary>
+             Record that a user has withdrawn his/her 'Like' vote.
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.PhotoPost.AddComment(System.String)">
+            <summary>
+             Add a comment to this post.
+            </summary>
+             <param name="text">
+             The new comment to add.
+             </param>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.PhotoPost.Display">
+            <summary>
+             Display the details of this post.
+             
+             (Currently: Print to the text terminal. This is simulating display 
+             in a web browser for now.)
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.BlueJ_08.PhotoPost.FormatElapsedTime(System.DateTime)">
+            <summary>
+            Create a string describing a time point in the past in terms 
+            relative to current time, such as "30 seconds ago" or "7 minutes ago".
+            Currently, only seconds and minutes are used for the string.
+            </summary>
+            <param name="time">
+            The time value to convert (in system milliseconds)
+            </param> 
+            <returns>
+            A relative time string for the given time
+            </returns>  
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.Car">
+            <summary>
+            This is a comment describing the
+            main purpose of the class
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Car.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Car.ChangeGear">
+            <summary>
+            Change gear between 1 and 5
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Car.Accelerate">
+            <summary>
+            Accelerate, speed the car up or slow the car down
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.Car.Brake">
+            <summary>
+            Stop the car from moving or slow it down
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.NetworkUI">
+            <summary>
+            This class provides a user interface for the Network
+            example whereby users can post messages and photos.
+            Users can also add comments and like/unlike posts.
+            </summary>
+            <author>
+            Derek Peacock Version 1.1
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.NetworkUI.AddComment">
+            <summary>
+            Add a comment to a selected Post
+            </summary>
+        </member>
+        <member name="T:CO453_ConsoleAppAnswer.Program">
+            <summary>
+            This class runs first and create a DistanceConverter
+            allowing the user three ways of converting distances
+            </summary>
+            <author>
+            Derek Peacock
+            </author>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.UserLib.OutputHeading(System.String)">
+            <summary>
+            This method outputs a heading showing the title
+            of the application or method and the author
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.UserLib.SelectChoice(System.String[])">
+            <summary>
+            This method will display a list of numbered choices
+            and will ask the user to select one and return it
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.UserLib.DisplayChoices(System.String[])">
+            <summary>
+            Display a list of choices as a numbered list
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.UserLib.InputNumber(System.String)">
+            <summary>
+            Prompt the user to enter a valid number  
+            which is returned
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.UserLib.InputNumber(System.String,System.Double,System.Double)">
+            <summary>
+            Repeated prompt the user to enter a number and only
+            return a value between min and max inclusive
+            </summary>
+        </member>
+        <member name="M:CO453_ConsoleAppAnswer.UserLib01.DisplayChoices(System.String[])">
+            <summary>
+            Display a list of choices as a numbered list
+            </summary>
+        </member>
+    </members>
+</doc>
